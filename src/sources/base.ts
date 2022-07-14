@@ -4,6 +4,7 @@ interface Label {
   chainId: ChainId;
   address: string;
   value: string;
+  keywords: string[];
 }
 
 abstract class Source {

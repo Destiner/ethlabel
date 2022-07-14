@@ -1,4 +1,5 @@
-import { ChainId, Source, Label } from './base.js';
+import { Source, Label } from './base.js';
+import { ARBITRUM, ETHEREUM, OPTIMISM, POLYGON, ChainId } from './chains.js';
 import TestSource from './items/test.js';
 
 async function fetch(): Promise<Label[]> {
@@ -14,4 +15,4 @@ async function fetch(): Promise<Label[]> {
 
 const sources: Source[] = [new TestSource()];
 
-export { ChainId, Label, fetch };
+export { ARBITRUM, ETHEREUM, OPTIMISM, POLYGON, ChainId, Label, fetch };

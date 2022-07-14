@@ -1,10 +1,20 @@
 import { writeFile } from 'node:fs/promises';
 
-import { ChainId, fetch } from './sources/index.js';
+import {
+  ARBITRUM,
+  ETHEREUM,
+  OPTIMISM,
+  POLYGON,
+  ChainId,
+  fetch,
+} from './sources/index.js';
 
 const labels = await fetch();
 const labelByChain: Record<ChainId, Record<string, string>> = {
-  1: {},
+  [ETHEREUM]: {},
+  [OPTIMISM]: {},
+  [POLYGON]: {},
+  [ARBITRUM]: {},
 };
 for (const label of labels) {
   const { address, value } = label;

@@ -1,4 +1,4 @@
-type ChainId = 1;
+import { ChainId } from './chains.js';
 
 interface Label {
   chainId: ChainId;
@@ -10,4 +10,4 @@ abstract class Source {
   abstract fetch(): Promise<Label[]>;
 }
 
-export { ChainId, Label, Source };
+export { Label, Source };

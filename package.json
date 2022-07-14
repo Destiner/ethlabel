@@ -1,0 +1,38 @@
+{
+  "name": "ethlabel",
+  "version": "0.1.0",
+  "description": "Ethereum address to labels mapping",
+  "author": "Timur Badretdinov <destinerx@gmail.com>",
+  "keywords": [
+    "metadata",
+    "ethereum"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Destiner/ethlabel.git"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "npm run lint:prettier && npm run lint:eslint",
+    "lint:prettier": "prettier -c \"src/**/*.{json,ts}\"",
+    "lint:eslint": "eslint \"src/**/*.ts\"",
+    "typecheck": "npx tsc --noEmit"
+  },
+  "dependencies": {
+    "axios": "^0.27.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^18.0.4",
+    "@typescript-eslint/eslint-plugin": "^5.30.6",
+    "@typescript-eslint/parser": "^5.30.6",
+    "eslint": "^8.19.0",
+    "eslint-import-resolver-typescript": "^3.2.5",
+    "eslint-plugin-import": "^2.26.0",
+    "prettier": "^2.7.1",
+    "ts-node": "^10.9.0",
+    "typescript": "^4.7.4"
+  }
+}

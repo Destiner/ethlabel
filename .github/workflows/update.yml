@@ -1,0 +1,19 @@
+name: Update
+
+on:
+  schedule:
+    - cron: '45 18 * * *'
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm ci
+      - run: npm run update
+      - run: |
+          git config --global user.email "bot@github.com"
+          git config --global user.name "GitHub Bot"
+          git add .
+          git commit -m "Update registry"
+          git push

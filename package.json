@@ -15,6 +15,7 @@
   "type": "module",
   "main": "lib/index.js",
   "scripts": {
+    "update": "npx ts-node --esm src/index.ts",
     "lint": "npm run lint:prettier && npm run lint:eslint",
     "lint:prettier": "prettier -c \"src/**/*.{json,ts}\"",
     "lint:eslint": "eslint \"src/**/*.ts\"",

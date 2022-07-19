@@ -1,18 +1,18 @@
 {
+  "0x7f5c764cbc14f9669b88837ca1490cca17c31607": {
+    "label": "USD Coin",
+    "keywords": [
+      "USDC"
+    ]
+  },
   "0x3e7ef8f50246f725885102e8238cbba33f276747": {
-    "label": "BarnBridge Governance Token",
+    "label": "BarnBridge Governance Token (Optimism)",
     "keywords": [
       "BOND"
     ]
   },
-  "0x0994206dfe8de6ec6920ff4d779b0d950605fb53": {
-    "label": "Curve DAO Token",
-    "keywords": [
-      "CRV"
-    ]
-  },
   "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1": {
-    "label": "Dai stable coin",
+    "label": "Dai Stablecoin",
     "keywords": [
       "DAI"
     ]
@@ -21,12 +21,6 @@
     "label": "Ethereum Name Service",
     "keywords": [
       "ENS"
-    ]
-  },
-  "0x350a791bfc2c21f9ed5d10980dad2e2638ffa7f6": {
-    "label": "Chainlink",
-    "keywords": [
-      "LINK"
     ]
   },
   "0xfeaa9194f9f8c1b65429e31341a103071464907e": {
@@ -41,12 +35,6 @@
       "MASK"
     ]
   },
-  "0xab7badef82e9fe11f6f33f87bc9bc2aa27f2fcb5": {
-    "label": "Maker",
-    "keywords": [
-      "MKR"
-    ]
-  },
   "0x9e1028f5f1d5ede59748ffcee5532509976840e0": {
     "label": "Perpetual",
     "keywords": [
@@ -59,16 +47,10 @@
       "RAI"
     ]
   },
-  "0xb548f63d4405466b36c0c0ac3318a22fdcec711a": {
-    "label": "Rari Governance Token",
+  "0x94b008aa00579c1307b0ef2c499ad98a8ce58e58": {
+    "label": "Tether USD",
     "keywords": [
-      "RGT"
-    ]
-  },
-  "0x8700daec35af8ff88c16bdf0418774cb3d7599b4": {
-    "label": "Synthetix",
-    "keywords": [
-      "SNX"
+      "USDT"
     ]
   },
   "0xe7798f023fc62146e8aa1b36da45fb70855a77ea": {
@@ -77,82 +59,40 @@
       "UMA"
     ]
   },
-  "0x6fd9d7ad17242c41f7131d257212c54a0e816691": {
-    "label": "Uniswap",
-    "keywords": [
-      "UNI"
-    ]
-  },
-  "0x7f5c764cbc14f9669b88837ca1490cca17c31607": {
-    "label": "USD Coin",
-    "keywords": [
-      "USDC"
-    ]
-  },
-  "0x94b008aa00579c1307b0ef2c499ad98a8ce58e58": {
-    "label": "Tether USD",
-    "keywords": [
-      "USDT"
-    ]
-  },
   "0x68f180fcce6836688e9084f035309e29bf0a2095": {
-    "label": "Wrapped Bitcoin",
+    "label": "Wrapped BTC",
     "keywords": [
       "WBTC"
     ]
   },
+  "0x4200000000000000000000000000000000000006": {
+    "label": "Wrapped Ether",
+    "keywords": [
+      "WETH"
+    ]
+  },
   "0xe0bb0d3de8c10976511e5030ca403dbf4c25165b": {
-    "label": "0xBitcoin",
+    "label": "0xBitcoin Token",
     "keywords": [
       "0xBTC"
     ]
   },
-  "0x8c6f28f2f1a3c87f0f938b96d27520d9751ec8d9": {
-    "label": "Synthetix USD",
+  "0x76fb31fb4af56892a25e32cfc43de717950c9278": {
+    "label": "Aave Token",
     "keywords": [
-      "sUSD"
+      "AAVE"
     ]
   },
-  "0xe405de8f52ba7559f9df3c368500b6e6ae6cee49": {
-    "label": "Synthetic Ether",
+  "0x61baadcf22d2565b0f471b291c475db5555e0b76": {
+    "label": "Aelin Token",
     "keywords": [
-      "sETH"
+      "AELIN"
     ]
   },
-  "0x298b9b95708152ff6968aafd889c6586e9169f1d": {
-    "label": "Synthetic Bitcoin",
+  "0xfe8b128ba8c78aabc59d4c64cee7ff28e9379921": {
+    "label": "Balancer",
     "keywords": [
-      "sBTC"
-    ]
-  },
-  "0xc5db22719a06418028a40a9b5e9a7c02959d0d08": {
-    "label": "Synthetic Chainlink",
-    "keywords": [
-      "sLINK"
-    ]
-  },
-  "0xc40f949f8a4e094d1b49a23ea9241d289b7b2819": {
-    "label": "LUSD Stablecoin",
-    "keywords": [
-      "LUSD"
-    ]
-  },
-  "0x9bcef72be871e61ed4fbbc7630889bee758eb81d": {
-    "label": "Rocket Pool ETH",
-    "keywords": [
-      "rETH"
-    ]
-  },
-  "0x00f932f0fe257456b32deda4758922e56a4f4b42": {
-    "label": "Paper",
-    "keywords": [
-      "PAPER"
-    ]
-  },
-  "0x7c6b91d9be155a6db01f749217d76ff02a7227f2": {
-    "label": "Sarcophagus",
-    "keywords": [
-      "SARCO"
+      "BAL"
     ]
   },
   "0x5029c236320b8f15ef0a657054b84d90bfbeded3": {
@@ -167,10 +107,28 @@
       "BitBTC"
     ]
   },
-  "0x50c5725949a6f0c72e6c4a641f24049a917db0cb": {
-    "label": "Lyra",
+  "0x350a791bfc2c21f9ed5d10980dad2e2638ffa7f6": {
+    "label": "ChainLink Token",
     "keywords": [
-      "LYRA"
+      "LINK"
+    ]
+  },
+  "0xe4f27b04cc7729901876b44f4eaa5102ec150265": {
+    "label": "CryptoFranc",
+    "keywords": [
+      "XCHF"
+    ]
+  },
+  "0x0994206dfe8de6ec6920ff4d779b0d950605fb53": {
+    "label": "Curve DAO Token",
+    "keywords": [
+      "CRV"
+    ]
+  },
+  "0x1da650c3b2daa8aa9ff6f661d4156ce24d08a062": {
+    "label": "Dentacoin",
+    "keywords": [
+      "DCN"
     ]
   },
   "0x9e5aac1ba1a2e6aed6b32689dfcf62a509ca96f3": {
@@ -185,106 +143,10 @@
       "USX"
     ]
   },
-  "0x4200000000000000000000000000000000000006": {
-    "label": "Wrapped Ether",
-    "keywords": [
-      "WETH"
-    ]
-  },
-  "0x7b0bcc23851bbf7601efc9e9fe532bf5284f65d3": {
-    "label": "Erica Social Token",
-    "keywords": [
-      "EST"
-    ]
-  },
-  "0x1da650c3b2daa8aa9ff6f661d4156ce24d08a062": {
-    "label": "Dentacoin",
-    "keywords": [
-      "DCN"
-    ]
-  },
-  "0xf98dcd95217e15e05d8638da4c91125e59590b07": {
-    "label": "Kromatika",
-    "keywords": [
-      "KROM"
-    ]
-  },
   "0xaf9fe3b5ccdae78188b1f8b9a49da7ae9510f151": {
     "label": "dHEDGE DAO Token",
     "keywords": [
       "DHT"
-    ]
-  },
-  "0x3bb4445d30ac020a84c1b5a8a2c6248ebc9779d0": {
-    "label": "Theranos Coin",
-    "keywords": [
-      "LIZ"
-    ]
-  },
-  "0x61baadcf22d2565b0f471b291c475db5555e0b76": {
-    "label": "Aelin Protocol",
-    "keywords": [
-      "AELIN"
-    ]
-  },
-  "0xcfd1d50ce23c46d3cf6407487b2f8934e96dc8f9": {
-    "label": "SPANK",
-    "keywords": [
-      "SPANK"
-    ]
-  },
-  "0x217d47011b23bb961eb6d93ca9945b7501a5bb11": {
-    "label": "Optimistic Thales Token",
-    "keywords": [
-      "THALES"
-    ]
-  },
-  "0xba28feb4b6a6b81e3f26f08b83a19e715c4294fd": {
-    "label": "UST (Wormhole)",
-    "keywords": [
-      "UST"
-    ]
-  },
-  "0xe4f27b04cc7729901876b44f4eaa5102ec150265": {
-    "label": "CryptoFranc",
-    "keywords": [
-      "XCHF"
-    ]
-  },
-  "0x76fb31fb4af56892a25e32cfc43de717950c9278": {
-    "label": "Aave Token",
-    "keywords": [
-      "AAVE"
-    ]
-  },
-  "0x81ab7e0d570b01411fcc4afd3d50ec8c241cb74b": {
-    "label": "Equalizer",
-    "keywords": [
-      "EQZ"
-    ]
-  },
-  "0x117cfd9060525452db4a34d51c0b3b7599087f05": {
-    "label": "Geyser",
-    "keywords": [
-      "GYSR"
-    ]
-  },
-  "0xfe8b128ba8c78aabc59d4c64cee7ff28e9379921": {
-    "label": "Balancer",
-    "keywords": [
-      "BAL"
-    ]
-  },
-  "0x1eba7a6a72c894026cd654ac5cdcf83a46445b08": {
-    "label": "Gitcoin",
-    "keywords": [
-      "GTC"
-    ]
-  },
-  "0x4200000000000000000000000000000000000042": {
-    "label": "Optimism",
-    "keywords": [
-      "OP"
     ]
   },
   "0x8ae125e8653821e851f12a49f7765db9a9ce7384": {
@@ -293,16 +155,154 @@
       "DOLA"
     ]
   },
+  "0x81ab7e0d570b01411fcc4afd3d50ec8c241cb74b": {
+    "label": "Equalizer",
+    "keywords": [
+      "EQZ"
+    ]
+  },
+  "0x7b0bcc23851bbf7601efc9e9fe532bf5284f65d3": {
+    "label": "Erica Social Token",
+    "keywords": [
+      "EST"
+    ]
+  },
+  "0x117cfd9060525452db4a34d51c0b3b7599087f05": {
+    "label": "Geyser",
+    "keywords": [
+      "GYSR"
+    ]
+  },
+  "0x1eba7a6a72c894026cd654ac5cdcf83a46445b08": {
+    "label": "Gitcoin",
+    "keywords": [
+      "GTC"
+    ]
+  },
+  "0xf98dcd95217e15e05d8638da4c91125e59590b07": {
+    "label": "Kromatika",
+    "keywords": [
+      "KROM"
+    ]
+  },
+  "0xc40f949f8a4e094d1b49a23ea9241d289b7b2819": {
+    "label": "LUSD Stablecoin",
+    "keywords": [
+      "LUSD"
+    ]
+  },
+  "0x50c5725949a6f0c72e6c4a641f24049a917db0cb": {
+    "label": "Lyra Token",
+    "keywords": [
+      "LYRA"
+    ]
+  },
+  "0xab7badef82e9fe11f6f33f87bc9bc2aa27f2fcb5": {
+    "label": "Maker",
+    "keywords": [
+      "MKR"
+    ]
+  },
+  "0x4200000000000000000000000000000000000042": {
+    "label": "Optimism",
+    "keywords": [
+      "OP"
+    ]
+  },
+  "0x217d47011b23bb961eb6d93ca9945b7501a5bb11": {
+    "label": "Thales DAO Token",
+    "keywords": [
+      "THALES"
+    ]
+  },
+  "0x00f932f0fe257456b32deda4758922e56a4f4b42": {
+    "label": "Paper",
+    "keywords": [
+      "PAPER"
+    ]
+  },
+  "0xb548f63d4405466b36c0c0ac3318a22fdcec711a": {
+    "label": "Rari Governance Token",
+    "keywords": [
+      "RGT"
+    ]
+  },
+  "0x9bcef72be871e61ed4fbbc7630889bee758eb81d": {
+    "label": "Rocket Pool ETH",
+    "keywords": [
+      "rETH"
+    ]
+  },
+  "0x7c6b91d9be155a6db01f749217d76ff02a7227f2": {
+    "label": "Sarcophagus",
+    "keywords": [
+      "SARCO"
+    ]
+  },
+  "0xcfd1d50ce23c46d3cf6407487b2f8934e96dc8f9": {
+    "label": "SPANK",
+    "keywords": [
+      "SPANK"
+    ]
+  },
+  "0x298b9b95708152ff6968aafd889c6586e9169f1d": {
+    "label": "Synth sBTC",
+    "keywords": [
+      "sBTC"
+    ]
+  },
+  "0xc5db22719a06418028a40a9b5e9a7c02959d0d08": {
+    "label": "Synth sLINK",
+    "keywords": [
+      "sLINK"
+    ]
+  },
+  "0xe405de8f52ba7559f9df3c368500b6e6ae6cee49": {
+    "label": "Synth sETH",
+    "keywords": [
+      "sETH"
+    ]
+  },
+  "0x8700daec35af8ff88c16bdf0418774cb3d7599b4": {
+    "label": "Synthetix Network Token",
+    "keywords": [
+      "SNX"
+    ]
+  },
+  "0x8c6f28f2f1a3c87f0f938b96d27520d9751ec8d9": {
+    "label": "Synth sUSD",
+    "keywords": [
+      "sUSD"
+    ]
+  },
   "0xd8f365c2c85648f9b89d9f1bf72c0ae4b1c36cfd": {
     "label": "TheDAO",
     "keywords": [
       "TheDAO"
     ]
   },
+  "0x3bb4445d30ac020a84c1b5a8a2c6248ebc9779d0": {
+    "label": "Theranos Coin",
+    "keywords": [
+      "LIZ"
+    ]
+  },
   "0xcb59a0a753fdb7491d5f3d794316f1ade197b21e": {
     "label": "TrueUSD",
     "keywords": [
       "TUSD"
+    ]
+  },
+  "0x6fd9d7ad17242c41f7131d257212c54a0e816691": {
+    "label": "Uniswap",
+    "keywords": [
+      "UNI"
+    ]
+  },
+  "0xba28feb4b6a6b81e3f26f08b83a19e715c4294fd": {
+    "label": "UST (Wormhole)",
+    "keywords": [
+      "UST"
     ]
   }
 }

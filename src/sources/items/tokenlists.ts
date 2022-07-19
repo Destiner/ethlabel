@@ -1,9 +1,7 @@
 import axios from 'axios';
 import 'dotenv/config';
-import { Call, Contract, Provider } from 'ethcall';
-import * as ethers from 'ethers';
 
-import erc20Abi from '../../abi/erc20.js';
+import { getErc20Metadata } from '../../utils/fetch.js';
 import { Label, Source } from '../base.js';
 import { ARBITRUM, ChainId, ETHEREUM, OPTIMISM, POLYGON } from '../chains.js';
 
@@ -20,18 +18,15 @@ interface Token {
   decimals: number;
 }
 
-interface MetadataWithCount {
-  count: number;
+interface Metadata {
   address: string;
   name: string;
   symbol: string;
 }
 
-interface FetchError {
-  code: ethers.errors;
+interface MetadataWithCount extends Metadata {
+  count: number;
 }
-
-type Metadata = Omit<MetadataWithCount, 'count'>;
 
 const chains: ChainId[] = [ETHEREUM, OPTIMISM, POLYGON, ARBITRUM];
 
@@ -86,10 +81,21 @@ class TokenlistSource extends Source {
       chainTokenlistAssets.sort((a, b) =>
         a.count === b.count ? a.name.localeCompare(b.name) : b.count - a.count,
       );
-      const chainAssets = await this.#getMetadata(
-        chainId,
-        chainTokenlistAssets,
+      const chainTokenlistAssetAddresses = chainTokenlistAssets.map(
+        (asset) => asset.address,
       );
+      const chainMetadata = await getErc20Metadata(
+        chainId,
+        chainTokenlistAssetAddresses,
+      );
+      const chainAssets = chainTokenlistAssets.map((asset) => {
+        const { address, name, symbol } = asset;
+        return {
+          address,
+          name: chainMetadata[address].name || name,
+          symbol: chainMetadata[address].symbol || symbol,
+        };
+      });
       for (const asset of chainAssets) {
         const label: Label = {
           address: asset.address.toLowerCase(),
@@ -123,119 +129,6 @@ class TokenlistSource extends Source {
         continue;
       }
     }
-  }
-
-  async #getMetadata(
-    chainId: ChainId,
-    assets: MetadataWithCount[],
-  ): Promise<Metadata[]> {
-    function callFunc(index: number): Call[] {
-      const address = addresses[index];
-      const contract = new Contract(address, erc20Abi);
-      return [contract.name(), contract.symbol()];
-    }
-
-    function processFunc(results: (string | null)[]): {
-      name: string | null;
-      symbol: string | null;
-    } {
-      const name = results[0];
-      const symbol = results[1];
-      return {
-        name,
-        symbol,
-      };
-    }
-
-    const key = process.env.ALCHEMY_KEY;
-    const provider = new ethers.providers.AlchemyProvider(chainId, key);
-    const ethcallProvider = new Provider();
-    await ethcallProvider.init(provider);
-    const addresses = assets.map((asset) => asset.address);
-    const results = await this.#getNullableListState(
-      addresses,
-      callFunc,
-      processFunc,
-      provider,
-    );
-
-    return assets.map((asset) => {
-      const { address, name, symbol } = asset;
-      return {
-        address,
-        name: results[address].name || name,
-        symbol: results[address].symbol || symbol,
-      };
-    });
-  }
-
-  async #getNullableListState<R, O>(
-    inputs: string[],
-    callFunc: (index: number) => Call[],
-    processFunc: (results: (R | null)[]) => O,
-    provider: ethers.providers.BaseProvider,
-    block?: number,
-  ): Promise<Record<string, O>> {
-    const LIMIT = 50;
-
-    const callMap = inputs.map((_row, index) => callFunc(index));
-    const allCalls = Object.values(callMap).flat();
-    const allResults = await this.#getNullableCallResults<R>(
-      allCalls,
-      LIMIT,
-      provider,
-      block,
-    );
-
-    let index = 0;
-    const outputs: Record<string, O> = {};
-    for (let i = 0; i < inputs.length; i++) {
-      const callCount = callMap[i].length;
-      const startIndex = index;
-      const endIndex = index + callCount;
-      index += callCount;
-      const results = allResults.slice(startIndex, endIndex);
-      const output = processFunc(results);
-      outputs[inputs[i]] = output;
-    }
-    return outputs;
-  }
-
-  async #getNullableCallResults<T>(
-    allCalls: Call[],
-    limit: number,
-    provider: ethers.providers.BaseProvider,
-    block?: number,
-  ): Promise<(T | null)[]> {
-    const ethcallProvider = new Provider();
-    await ethcallProvider.init(provider);
-
-    const allResults: (T | null)[] = [];
-    for (let i = 0; i < allCalls.length / limit; i++) {
-      const startIndex = i * limit;
-      const endIndex = Math.min((i + 1) * limit, allCalls.length);
-      const calls = allCalls.slice(startIndex, endIndex);
-      let results = null;
-      while (!results) {
-        try {
-          const canFail = calls.map(() => true);
-          results = await ethcallProvider.tryEach<T>(calls, canFail, block);
-        } catch (e: unknown) {
-          const error = e as FetchError;
-          if (error.code === ethers.errors.TIMEOUT) {
-            console.log(
-              `Failed to fetch state, reason: ${error.code}, retrying`,
-            );
-          } else {
-            throw e;
-          }
-        }
-      }
-      for (const result of results) {
-        allResults.push(result);
-      }
-    }
-    return allResults;
   }
 }
 

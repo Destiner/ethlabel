@@ -5,6 +5,7 @@ interface Label {
   address: string;
   value: string;
   keywords: string[];
+  type: 'erc20';
 }
 
 abstract class Source {

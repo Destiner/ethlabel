@@ -91,11 +91,12 @@ class TokenlistSource extends Source {
         chainTokenlistAssets,
       );
       for (const asset of chainAssets) {
-        const label = {
+        const label: Label = {
           address: asset.address.toLowerCase(),
           value: asset.name,
           keywords: [asset.symbol],
           chainId,
+          type: 'erc20',
         };
         labels.push(label);
       }

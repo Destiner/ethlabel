@@ -1,5 +1,9 @@
 import axios from 'axios';
+import 'dotenv/config';
+import { Call, Contract, Provider } from 'ethcall';
+import * as ethers from 'ethers';
 
+import erc20Abi from '../../abi/erc20.js';
 import { Label, Source } from '../base.js';
 import { ARBITRUM, ChainId, ETHEREUM, OPTIMISM, POLYGON } from '../chains.js';
 
@@ -16,64 +20,90 @@ interface Token {
   decimals: number;
 }
 
-const lists: Record<ChainId, string[]> = {
-  [ETHEREUM]: [
-    'https://tokens.coingecko.com/uniswap/all.json',
-    'https://api.coinmarketcap.com/data-api/v3/uniswap/all.json',
-    'https://t2crtokens.eth.link/',
-    'https://tokens.uniswap.org',
-    'https://token-list.sushi.com',
-    'https://raw.githubusercontent.com/balancer-labs/assets/master/generated/listed.tokenlist.json',
-  ],
-  [OPTIMISM]: [
-    'https://tokens.uniswap.org',
-    'https://static.optimism.io/optimism.tokenlist.json',
-  ],
-  [POLYGON]: [
-    'https://tokens.uniswap.org',
-    'https://token-list.sushi.com',
-    'https://tokens.coingecko.com/polygon-pos/all.json',
-    'https://unpkg.com/quickswap-default-token-list/build/quickswap-default.tokenlist.json',
-    'https://raw.githubusercontent.com/balancer-labs/assets/refactor-for-multichain/generated/polygon.listed.tokenlist.json',
-  ],
-  [ARBITRUM]: [
-    'https://tokens.uniswap.org',
-    'https://token-list.sushi.com',
-    'https://bridge.arbitrum.io/token-list-42161.json',
-    'https://raw.githubusercontent.com/balancer-labs/assets/refactor-for-multichain/generated/arbitrum.listed.tokenlist.json',
-  ],
-};
+interface MetadataWithCount {
+  count: number;
+  address: string;
+  name: string;
+  symbol: string;
+}
+
+interface FetchError {
+  code: ethers.errors;
+}
+
+type Metadata = Omit<MetadataWithCount, 'count'>;
+
+const chains: ChainId[] = [ETHEREUM, OPTIMISM, POLYGON, ARBITRUM];
+
+const listUrls: string[] = [
+  'https://tokens.coingecko.com/uniswap/all.json',
+  'https://tokens.coingecko.com/polygon-pos/all.json',
+  'https://api.coinmarketcap.com/data-api/v3/uniswap/all.json',
+  'https://static.optimism.io/optimism.tokenlist.json',
+  'https://bridge.arbitrum.io/token-list-42161.json',
+  'https://tokens.uniswap.org',
+  'https://token-list.sushi.com',
+  'https://raw.githubusercontent.com/balancer-labs/assets/master/generated/listed.tokenlist.json',
+  'https://raw.githubusercontent.com/balancer-labs/assets/refactor-for-multichain/generated/polygon.listed.tokenlist.json',
+  'https://raw.githubusercontent.com/balancer-labs/assets/refactor-for-multichain/generated/arbitrum.listed.tokenlist.json',
+  'https://unpkg.com/quickswap-default-token-list/build/quickswap-default.tokenlist.json',
+  'https://t2crtokens.eth.link/',
+];
 
 class TokenlistSource extends Source {
   async fetch(): Promise<Label[]> {
     const labels: Label[] = [];
-    const chainIds = Object.keys(lists).map(
-      (idString) => parseInt(idString) as ChainId,
-    );
-    for (const chainId of chainIds) {
-      const chainLists = lists[chainId];
-      for (const url of chainLists) {
-        const list = await this.#getList(url, chainId);
-        if (!list) {
-          continue;
+    const lists: TokenList[] = [];
+    for (const listUrl of listUrls) {
+      const list = await this.#getList(listUrl);
+      if (!list) {
+        continue;
+      }
+      lists.push(list);
+    }
+    const assets: Record<ChainId, Record<string, MetadataWithCount>> = {
+      [ETHEREUM]: {},
+      [OPTIMISM]: {},
+      [POLYGON]: {},
+      [ARBITRUM]: {},
+    };
+    for (const chainId of chains) {
+      for (const list of lists) {
+        const tokens = list.tokens.filter((token) => token.chainId === chainId);
+        for (const token of tokens) {
+          if (!assets[chainId][token.address]) {
+            assets[chainId][token.address] = {
+              count: 0,
+              address: token.address,
+              name: token.name,
+              symbol: token.symbol,
+            };
+          }
+          assets[chainId][token.address].count++;
         }
-        const listLabels: Label[] = list.tokens.map((token) => {
-          return {
-            address: token.address.toLowerCase(),
-            value: token.name,
-            keywords: [token.symbol],
-            chainId,
-          };
-        });
-        for (const label of listLabels) {
-          labels.push(label);
-        }
+      }
+      const chainTokenlistAssets = Object.values(assets[chainId]);
+      chainTokenlistAssets.sort((a, b) =>
+        a.count === b.count ? a.name.localeCompare(b.name) : b.count - a.count,
+      );
+      const chainAssets = await this.#getMetadata(
+        chainId,
+        chainTokenlistAssets,
+      );
+      for (const asset of chainAssets) {
+        const label = {
+          address: asset.address.toLowerCase(),
+          value: asset.name,
+          keywords: [asset.symbol],
+          chainId,
+        };
+        labels.push(label);
       }
     }
     return labels;
   }
 
-  async #getList(url: string, chainId: number): Promise<TokenList | null> {
+  async #getList(url: string): Promise<TokenList | null> {
     let tries = 0;
     for (;;) {
       const delay = 1000 * 2 ** tries;
@@ -87,16 +117,124 @@ class TokenlistSource extends Source {
         if (listResponse.status !== 200) {
           continue;
         }
-        const fullList = listResponse.data as TokenList;
-        const list = {
-          ...fullList,
-          tokens: fullList.tokens.filter((token) => token.chainId === chainId),
-        };
-        return list;
+        return listResponse.data as TokenList;
       } catch (e) {
         continue;
       }
     }
+  }
+
+  async #getMetadata(
+    chainId: ChainId,
+    assets: MetadataWithCount[],
+  ): Promise<Metadata[]> {
+    function callFunc(index: number): Call[] {
+      const address = addresses[index];
+      const contract = new Contract(address, erc20Abi);
+      return [contract.name(), contract.symbol()];
+    }
+
+    function processFunc(results: (string | null)[]): {
+      name: string | null;
+      symbol: string | null;
+    } {
+      const name = results[0];
+      const symbol = results[1];
+      return {
+        name,
+        symbol,
+      };
+    }
+
+    const key = process.env.ALCHEMY_KEY;
+    const provider = new ethers.providers.AlchemyProvider(chainId, key);
+    const ethcallProvider = new Provider();
+    await ethcallProvider.init(provider);
+    const addresses = assets.map((asset) => asset.address);
+    const results = await this.#getNullableListState(
+      addresses,
+      callFunc,
+      processFunc,
+      provider,
+    );
+
+    return assets.map((asset) => {
+      const { address, name, symbol } = asset;
+      return {
+        address,
+        name: results[address].name || name,
+        symbol: results[address].symbol || symbol,
+      };
+    });
+  }
+
+  async #getNullableListState<R, O>(
+    inputs: string[],
+    callFunc: (index: number) => Call[],
+    processFunc: (results: (R | null)[]) => O,
+    provider: ethers.providers.BaseProvider,
+    block?: number,
+  ): Promise<Record<string, O>> {
+    const LIMIT = 50;
+
+    const callMap = inputs.map((_row, index) => callFunc(index));
+    const allCalls = Object.values(callMap).flat();
+    const allResults = await this.#getNullableCallResults<R>(
+      allCalls,
+      LIMIT,
+      provider,
+      block,
+    );
+
+    let index = 0;
+    const outputs: Record<string, O> = {};
+    for (let i = 0; i < inputs.length; i++) {
+      const callCount = callMap[i].length;
+      const startIndex = index;
+      const endIndex = index + callCount;
+      index += callCount;
+      const results = allResults.slice(startIndex, endIndex);
+      const output = processFunc(results);
+      outputs[inputs[i]] = output;
+    }
+    return outputs;
+  }
+
+  async #getNullableCallResults<T>(
+    allCalls: Call[],
+    limit: number,
+    provider: ethers.providers.BaseProvider,
+    block?: number,
+  ): Promise<(T | null)[]> {
+    const ethcallProvider = new Provider();
+    await ethcallProvider.init(provider);
+
+    const allResults: (T | null)[] = [];
+    for (let i = 0; i < allCalls.length / limit; i++) {
+      const startIndex = i * limit;
+      const endIndex = Math.min((i + 1) * limit, allCalls.length);
+      const calls = allCalls.slice(startIndex, endIndex);
+      let results = null;
+      while (!results) {
+        try {
+          const canFail = calls.map(() => true);
+          results = await ethcallProvider.tryEach<T>(calls, canFail, block);
+        } catch (e: unknown) {
+          const error = e as FetchError;
+          if (error.code === ethers.errors.TIMEOUT) {
+            console.log(
+              `Failed to fetch state, reason: ${error.code}, retrying`,
+            );
+          } else {
+            throw e;
+          }
+        }
+      }
+      for (const result of results) {
+        allResults.push(result);
+      }
+    }
+    return allResults;
   }
 }
 

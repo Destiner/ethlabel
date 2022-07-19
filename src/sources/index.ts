@@ -1,6 +1,7 @@
 import { Source, Label } from './base.js';
 import { ARBITRUM, ETHEREUM, OPTIMISM, POLYGON, ChainId } from './chains.js';
 import TokenlistSource from './items/tokenlists.js';
+import TrustwalletSource from './items/trustwallet.js';
 
 async function fetch(): Promise<Label[]> {
   const allLabels: Label[] = [];
@@ -21,6 +22,6 @@ async function fetch(): Promise<Label[]> {
   return allLabels;
 }
 
-const sources: Source[] = [new TokenlistSource()];
+const sources: Source[] = [new TokenlistSource(), new TrustwalletSource()];
 
 export { ARBITRUM, ETHEREUM, OPTIMISM, POLYGON, ChainId, Label, fetch };

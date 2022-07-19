@@ -6,7 +6,15 @@ async function fetch(): Promise<Label[]> {
   const allLabels: Label[] = [];
   for (const source of sources) {
     const sourceLabels = await source.fetch();
-    for (const sourceLabel of sourceLabels) {
+    const uniqueSourceLabels = sourceLabels.filter(
+      (sourceLabel) =>
+        !allLabels.find(
+          (label) =>
+            label.chainId === sourceLabel.chainId &&
+            label.address === sourceLabel.address,
+        ),
+    );
+    for (const sourceLabel of uniqueSourceLabels) {
       allLabels.push(sourceLabel);
     }
   }

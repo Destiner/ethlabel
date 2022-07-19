@@ -31,5 +31,5 @@ for (const label of labels) {
 for (const chainIdString in labelByChain) {
   const chainId = parseInt(chainIdString) as ChainId;
   const string = JSON.stringify(labelByChain[chainId], null, 2);
-  await writeFile(`./labels/${chainId}.json`, string);
+  await writeFile(`./labels/address/${chainId}.json`, string);
 }

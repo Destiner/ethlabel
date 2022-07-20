@@ -12,6 +12,7 @@ import {
 interface LabelItem {
   label: string;
   keywords: string[];
+  type: 'erc20';
 }
 
 const labels = await fetch();
@@ -22,10 +23,11 @@ const labelByChain: Record<ChainId, Record<string, LabelItem>> = {
   [ARBITRUM]: {},
 };
 for (const label of labels) {
-  const { address, value, keywords } = label;
+  const { address, value, keywords, type } = label;
   labelByChain[label.chainId][address] = {
     label: value,
     keywords,
+    type,
   };
 }
 for (const chainIdString in labelByChain) {

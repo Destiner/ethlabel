@@ -42,7 +42,7 @@ const listUrls: string[] = [
   'https://raw.githubusercontent.com/balancer-labs/assets/refactor-for-multichain/generated/polygon.listed.tokenlist.json',
   'https://raw.githubusercontent.com/balancer-labs/assets/refactor-for-multichain/generated/arbitrum.listed.tokenlist.json',
   'https://unpkg.com/quickswap-default-token-list/build/quickswap-default.tokenlist.json',
-  'https://t2crtokens.eth.link/',
+  'https://t2crtokens.eth.limo',
 ];
 
 class TokenlistSource extends Source {

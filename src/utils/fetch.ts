@@ -56,7 +56,7 @@ async function getNullableListState<R, O>(
   provider: ethers.providers.BaseProvider,
   block?: number,
 ): Promise<Record<string, O>> {
-  const LIMIT = 50;
+  const LIMIT = 30;
 
   const callMap = inputs.map((_row, index) => callFunc(index));
   const allCalls = Object.values(callMap).flat();

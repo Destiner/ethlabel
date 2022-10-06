@@ -66,15 +66,16 @@ class TokenlistSource extends Source {
       for (const list of lists) {
         const tokens = list.tokens.filter((token) => token.chainId === chainId);
         for (const token of tokens) {
-          if (!assets[chainId][token.address]) {
-            assets[chainId][token.address] = {
+          const address = token.address.toLowerCase();
+          if (!assets[chainId][address]) {
+            assets[chainId][address] = {
               count: 0,
-              address: token.address,
+              address,
               name: token.name,
               symbol: token.symbol,
             };
           }
-          assets[chainId][token.address].count++;
+          assets[chainId][address].count++;
         }
       }
       const chainTokenlistAssets = Object.values(assets[chainId]);

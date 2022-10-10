@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { Call, Contract, Provider } from 'ethcall';
 import { ethers } from 'ethers';
 
@@ -11,6 +12,50 @@ interface Erc20Metadata {
 
 interface FetchError {
   code: ethers.errors;
+}
+
+async function getSubgraphRecords<T>(
+  url: string,
+  entity: string,
+  orderBy: string,
+  fields: string[],
+): Promise<T[]> {
+  const subgraphClient = axios.create({
+    baseURL: 'https://api.thegraph.com/subgraphs/name/',
+    headers: { 'Content-Type': 'application/json' },
+  });
+
+  const records: T[] = [];
+  const perPage = 1000;
+  let page = 0;
+
+  while (records.length === page * perPage) {
+    const query = `
+      query {
+        ${entity}(
+          first: ${perPage},
+          skip: ${page * perPage},
+          orderBy: ${orderBy},
+          orderDirection: desc,
+        ) {
+          ${fields.join('\n')}
+        }
+      }
+    `;
+    const response = await subgraphClient.post(url, {
+      query,
+    });
+    if (response.data.errors) {
+      break;
+    }
+    const pageRecords: T[] = response.data.data[entity];
+    for (const record of pageRecords) {
+      records.push(record);
+    }
+    page++;
+  }
+
+  return records;
 }
 
 async function getErc20Metadata(
@@ -116,5 +161,4 @@ async function getNullableCallResults<T>(
   return allResults;
 }
 
-// eslint-disable-next-line import/prefer-default-export
-export { getErc20Metadata };
+export { getSubgraphRecords, getErc20Metadata };

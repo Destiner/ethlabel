@@ -68,11 +68,12 @@ class UniswapSource extends Source {
     return Object.fromEntries(
       pools.map((pool) => {
         const label = getPoolLabel(pool, previousLabels);
+        const symbol = getPoolSymbol(pool, previousLabels);
         return [
           pool.address,
           {
             label,
-            keywords: [],
+            keywords: [symbol],
             type: 'pool',
           },
         ];
@@ -107,6 +108,21 @@ function getPoolLabel(pool: Pool, previousLabels: ChainLabelMap): string {
   const token1Symbol = token1Label.keywords[0];
   const feeLabel = `${100 * pool.fee}%`;
   return `Uniswap V3 ${token0Symbol}/${token1Symbol} ${feeLabel}`;
+}
+
+function getPoolSymbol(pool: Pool, previousLabels: ChainLabelMap): string {
+  const token0Label = previousLabels[pool.token0];
+  const token1Label = previousLabels[pool.token1];
+  if (!token0Label || !token1Label) {
+    return 'UNI-V3';
+  }
+  if (token0Label.type !== 'erc20' || token1Label.type !== 'erc20') {
+    return 'UNI-V3';
+  }
+  const token0Symbol = token0Label.keywords[0];
+  const token1Symbol = token1Label.keywords[0];
+  const feeLabel = `${1000000 * pool.fee}`;
+  return `UNI-V3-${token0Symbol}-${token1Symbol}-${feeLabel}`;
 }
 
 export default UniswapSource;

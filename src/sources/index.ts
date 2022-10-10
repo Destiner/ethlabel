@@ -1,7 +1,7 @@
 import { Source, Label, LabelType, LabelMap } from './base.js';
 import { ARBITRUM, ETHEREUM, OPTIMISM, POLYGON, ChainId } from './chains.js';
 import TokenlistSource from './items/tokenlists.js';
-// import TrustwalletSource from './items/trustwallet.js';
+import UniswapSource from './items/uniswap.js';
 
 async function fetch(): Promise<LabelMap> {
   const allLabels: LabelMap = {
@@ -23,10 +23,7 @@ async function fetch(): Promise<LabelMap> {
   return allLabels;
 }
 
-const sources: Source[] = [
-  new TokenlistSource(),
-  // new TrustwalletSource(),
-];
+const sources: Source[] = [new TokenlistSource(), new UniswapSource()];
 
 export {
   ARBITRUM,

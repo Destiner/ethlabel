@@ -2,7 +2,7 @@ import axios from 'axios';
 import 'dotenv/config';
 
 import { getErc20Metadata } from '../../utils/fetch.js';
-import { Label, Source } from '../base.js';
+import { Label, LabelMap, Source } from '../base.js';
 import { ARBITRUM, ChainId, ETHEREUM, OPTIMISM, POLYGON } from '../chains.js';
 
 interface TokenList {
@@ -46,8 +46,13 @@ const listUrls: string[] = [
 ];
 
 class TokenlistSource extends Source {
-  async fetch(): Promise<Label[]> {
-    const labels: Label[] = [];
+  async fetch(): Promise<LabelMap> {
+    const labels: LabelMap = {
+      [ARBITRUM]: {},
+      [ETHEREUM]: {},
+      [OPTIMISM]: {},
+      [POLYGON]: {},
+    };
     const lists: TokenList[] = [];
     for (const listUrl of listUrls) {
       const list = await this.#getList(listUrl);
@@ -99,13 +104,11 @@ class TokenlistSource extends Source {
       });
       for (const asset of chainAssets) {
         const label: Label = {
-          address: asset.address.toLowerCase(),
-          value: asset.name,
+          label: asset.name,
           keywords: [asset.symbol],
-          chainId,
           type: 'erc20',
         };
-        labels.push(label);
+        labels[chainId][asset.address.toLowerCase()] = label;
       }
     }
     return labels;

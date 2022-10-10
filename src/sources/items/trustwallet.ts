@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 import { getErc20Metadata } from '../../utils/fetch.js';
-import { Label, Source } from '../base.js';
+import { Label, LabelMap, Source } from '../base.js';
 import {
   ChainId,
   ETHEREUM,
@@ -27,8 +27,13 @@ const githubClient = axios.create({
 });
 
 class TrustwalletSource extends Source {
-  async fetch(): Promise<Label[]> {
-    const labels: Label[] = [];
+  async fetch(): Promise<LabelMap> {
+    const labels: LabelMap = {
+      [ETHEREUM]: {},
+      [OPTIMISM]: {},
+      [POLYGON]: {},
+      [ARBITRUM]: {},
+    };
     for (const chainId of CHAINS) {
       const assets = await this.#getAssets(chainId);
       const chainMetadata = await getErc20Metadata(chainId, assets);
@@ -38,13 +43,11 @@ class TrustwalletSource extends Source {
           continue;
         }
         const label: Label = {
-          address,
-          value: name,
+          label: name,
           keywords: [symbol],
-          chainId,
           type: 'erc20',
         };
-        labels.push(label);
+        labels[chainId][address] = label;
       }
     }
     return labels;

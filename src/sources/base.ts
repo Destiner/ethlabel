@@ -1,15 +1,18 @@
 import { ChainId } from './chains.js';
 
+type LabelType = 'erc20' | 'pool';
+
+type ChainLabelMap = Record<string, Label>;
+type LabelMap = Record<ChainId, ChainLabelMap>;
+
 interface Label {
-  chainId: ChainId;
-  address: string;
-  value: string;
+  label: string;
   keywords: string[];
-  type: 'erc20';
+  type: LabelType;
 }
 
 abstract class Source {
-  abstract fetch(): Promise<Label[]>;
+  abstract fetch(previousLabels: LabelMap): Promise<LabelMap>;
 }
 
-export { Label, Source };
+export { ChainLabelMap, LabelType, LabelMap, Label, Source };

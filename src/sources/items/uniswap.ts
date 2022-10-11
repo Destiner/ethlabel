@@ -67,12 +67,12 @@ class UniswapSource extends Source {
 
     return Object.fromEntries(
       pools.map((pool) => {
-        const label = getPoolLabel(pool, previousLabels);
+        const value = getPoolLabel(pool, previousLabels);
         const symbol = getPoolSymbol(pool, previousLabels);
         return [
           pool.address,
           {
-            label,
+            value,
             keywords: [symbol],
             type: 'uniswap-v3-pool',
           },

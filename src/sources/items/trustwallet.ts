@@ -43,7 +43,7 @@ class TrustwalletSource extends Source {
           continue;
         }
         const label: Label = {
-          label: name,
+          value: name,
           keywords: [symbol],
           type: 'erc20',
         };

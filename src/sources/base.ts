@@ -6,7 +6,7 @@ type ChainLabelMap = Record<string, Label>;
 type LabelMap = Record<ChainId, ChainLabelMap>;
 
 interface Label {
-  label: string;
+  value: string;
   keywords: string[];
   type: LabelType;
 }

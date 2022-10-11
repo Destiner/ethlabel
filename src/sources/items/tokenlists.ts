@@ -104,7 +104,7 @@ class TokenlistSource extends Source {
       });
       for (const asset of chainAssets) {
         const label: Label = {
-          label: asset.name,
+          value: asset.name,
           keywords: [asset.symbol],
           type: 'erc20',
         };

@@ -74,7 +74,7 @@ class UniswapSource extends Source {
           {
             label,
             keywords: [symbol],
-            type: 'pool',
+            type: 'uniswap-v3-pool',
           },
         ];
       }),

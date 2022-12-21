@@ -1,7 +1,7 @@
 import { Source, Label, LabelType, LabelMap } from './base.js';
 import { ARBITRUM, ETHEREUM, OPTIMISM, POLYGON, ChainId } from './chains.js';
 import TokenlistSource from './items/tokenlists.js';
-import UniswapSource from './items/uniswap.js';
+import UniswapV3PoolSource from './items/uniswap/v3-pools.js';
 import WrappedSource from './items/wrapped.js';
 
 async function fetch(): Promise<LabelMap> {
@@ -26,7 +26,7 @@ async function fetch(): Promise<LabelMap> {
 
 const sources: Source[] = [
   new TokenlistSource(),
-  new UniswapSource(),
+  new UniswapV3PoolSource(),
   new WrappedSource(),
 ];
 

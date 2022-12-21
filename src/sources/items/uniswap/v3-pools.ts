@@ -1,4 +1,4 @@
-import { ChainLabelMap, LabelMap, Source } from '../../sources/base.js';
+import { ChainLabelMap, LabelMap, Source } from '../../../sources/base.js';
 import {
   ARBITRUM,
   ChainId,
@@ -6,8 +6,8 @@ import {
   ETHEREUM,
   OPTIMISM,
   POLYGON,
-} from '../../sources/chains.js';
-import { getSubgraphRecords } from '../../utils/fetch.js';
+} from '../../../sources/chains.js';
+import { getSubgraphRecords } from '../../../utils/fetch.js';
 
 interface PoolRaw {
   id: string;
@@ -27,7 +27,7 @@ interface Pool {
   fee: number;
 }
 
-class UniswapSource extends Source {
+class UniswapV3PoolSource extends Source {
   async fetch(previousLabels: LabelMap): Promise<LabelMap> {
     const labels: LabelMap = {
       [ARBITRUM]: {},
@@ -125,4 +125,4 @@ function getPoolSymbol(pool: Pool, previousLabels: ChainLabelMap): string {
   return `UNI-V3-${token0Symbol}-${token1Symbol}-${feeLabel}`;
 }
 
-export default UniswapSource;
+export default UniswapV3PoolSource;

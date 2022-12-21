@@ -1,6 +1,11 @@
 import { ChainId } from './chains.js';
 
-type LabelType = 'wrapped' | 'erc20' | 'uniswap-v2-pool' | 'uniswap-v3-pool';
+type LabelType =
+  | 'wrapped'
+  | 'erc20'
+  | 'uniswap-v2-pool'
+  | 'uniswap-v2-misc'
+  | 'uniswap-v3-pool';
 
 type ChainLabelMap = Record<string, Label>;
 type LabelMap = Record<ChainId, ChainLabelMap>;

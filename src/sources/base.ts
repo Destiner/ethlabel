@@ -5,7 +5,8 @@ type LabelType =
   | 'erc20'
   | 'uniswap-v2-pool'
   | 'uniswap-v2-misc'
-  | 'uniswap-v3-pool';
+  | 'uniswap-v3-pool'
+  | 'uniswap-v3-misc';
 
 type ChainLabelMap = Record<string, Label>;
 type LabelMap = Record<ChainId, ChainLabelMap>;

@@ -3,6 +3,7 @@ import { ARBITRUM, ETHEREUM, OPTIMISM, POLYGON, ChainId } from './chains.js';
 import TokenlistSource from './items/tokenlists.js';
 import UniswapV2MiscSource from './items/uniswap/v2-misc.js';
 import UniswapV2PoolSource from './items/uniswap/v2-pools.js';
+import UniswapV3MiscSource from './items/uniswap/v3-misc.js';
 import UniswapV3PoolSource from './items/uniswap/v3-pools.js';
 import WrappedSource from './items/wrapped.js';
 
@@ -30,6 +31,7 @@ const sources: Source[] = [
   new TokenlistSource(),
   new UniswapV2MiscSource(),
   new UniswapV2PoolSource(),
+  new UniswapV3MiscSource(),
   new UniswapV3PoolSource(),
   new WrappedSource(),
 ];

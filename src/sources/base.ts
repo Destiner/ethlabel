@@ -3,6 +3,8 @@ import { ChainId } from './chains.js';
 type LabelType =
   | 'wrapped'
   | 'erc20'
+  | 'sushiswap-v1-pool'
+  | 'sushiswap-v1-misc'
   | 'uniswap-v2-pool'
   | 'uniswap-v2-misc'
   | 'uniswap-v3-pool'

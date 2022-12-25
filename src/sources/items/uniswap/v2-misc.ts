@@ -1,4 +1,4 @@
-import { LabelMap, Source } from '../../../sources/base.js';
+import { LabelMap, Source as BaseSource } from '../../../sources/base.js';
 import {
   ARBITRUM,
   ETHEREUM,
@@ -6,7 +6,7 @@ import {
   POLYGON,
 } from '../../../sources/chains.js';
 
-class UniswapV2Source extends Source {
+class Source extends BaseSource {
   async fetch(): Promise<LabelMap> {
     return {
       [ARBITRUM]: {},
@@ -33,4 +33,4 @@ class UniswapV2Source extends Source {
   }
 }
 
-export default UniswapV2Source;
+export default Source;

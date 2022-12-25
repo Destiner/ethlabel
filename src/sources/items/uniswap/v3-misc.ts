@@ -1,4 +1,8 @@
-import { ChainLabelMap, LabelMap, Source } from '../../../sources/base.js';
+import {
+  ChainLabelMap,
+  LabelMap,
+  Source as BaseSource,
+} from '../../../sources/base.js';
 import {
   ARBITRUM,
   ETHEREUM,
@@ -46,7 +50,7 @@ const contracts: Contract[] = [
   { name: 'Migrator', address: '0xa5644e29708357803b5a882d272c41cc0df92b34' },
 ];
 
-class UniswapV3Source extends Source {
+class Source extends BaseSource {
   async fetch(): Promise<LabelMap> {
     return {
       [ARBITRUM]: this.getContracts(),
@@ -70,4 +74,4 @@ class UniswapV3Source extends Source {
   }
 }
 
-export default UniswapV3Source;
+export default Source;

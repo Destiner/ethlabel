@@ -1,4 +1,8 @@
-import { ChainLabelMap, LabelMap, Source } from '../../../sources/base.js';
+import {
+  ChainLabelMap,
+  LabelMap,
+  Source as BaseSource,
+} from '../../../sources/base.js';
 import {
   ARBITRUM,
   ChainId,
@@ -27,7 +31,7 @@ interface Pool {
   fee: number;
 }
 
-class UniswapV3PoolSource extends Source {
+class Source extends BaseSource {
   async fetch(previousLabels: LabelMap): Promise<LabelMap> {
     const labels: LabelMap = {
       [ARBITRUM]: {},
@@ -125,4 +129,4 @@ function getPoolSymbol(pool: Pool, previousLabels: ChainLabelMap): string {
   return `UNI-V3-${token0Symbol}-${token1Symbol}-${feeLabel}`;
 }
 
-export default UniswapV3PoolSource;
+export default Source;

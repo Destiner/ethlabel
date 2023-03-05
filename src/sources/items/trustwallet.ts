@@ -8,6 +8,7 @@ import {
   OPTIMISM,
   POLYGON,
   ARBITRUM,
+  ZKSYNC_ERA_GOERLI,
   CHAINS,
 } from '../chains.js';
 
@@ -32,6 +33,7 @@ class TrustwalletSource extends Source {
       [ETHEREUM]: {},
       [OPTIMISM]: {},
       [POLYGON]: {},
+      [ZKSYNC_ERA_GOERLI]: {},
       [ARBITRUM]: {},
     };
     for (const chainId of CHAINS) {
@@ -54,7 +56,7 @@ class TrustwalletSource extends Source {
   }
 
   async #getAssets(chainId: ChainId): Promise<string[]> {
-    function getChainName(chainId: ChainId): string {
+    function getChainName(chainId: ChainId): string | null {
       switch (chainId) {
         case ETHEREUM:
           return 'ethereum';
@@ -62,6 +64,8 @@ class TrustwalletSource extends Source {
           return 'optimism';
         case POLYGON:
           return 'polygon';
+        case ZKSYNC_ERA_GOERLI:
+          return null;
         case ARBITRUM:
           return 'arbitrum';
       }
@@ -76,6 +80,9 @@ class TrustwalletSource extends Source {
     }
     const blockchainsDir = await githubClient.get<TreeResponse>(blockchainsSha);
     const chainName = getChainName(chainId);
+    if (!chainName) {
+      return [];
+    }
     const chainSha = blockchainsDir.data.tree.find(
       (item) => item.path === chainName,
     )?.sha;

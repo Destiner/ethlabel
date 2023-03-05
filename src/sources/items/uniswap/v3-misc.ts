@@ -7,6 +7,7 @@ import {
   ARBITRUM,
   ETHEREUM,
   OPTIMISM,
+  ZKSYNC_ERA_GOERLI,
   POLYGON,
 } from '../../../sources/chains.js';
 
@@ -56,6 +57,7 @@ class Source extends BaseSource {
       [ARBITRUM]: this.getContracts(),
       [ETHEREUM]: this.getContracts(),
       [OPTIMISM]: this.getContracts(),
+      [ZKSYNC_ERA_GOERLI]: {},
       [POLYGON]: this.getContracts(),
     };
   }

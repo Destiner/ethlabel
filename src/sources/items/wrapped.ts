@@ -1,5 +1,11 @@
 import { LabelMap, Source } from '../base.js';
-import { ARBITRUM, ETHEREUM, OPTIMISM, POLYGON } from '../chains.js';
+import {
+  ARBITRUM,
+  ETHEREUM,
+  OPTIMISM,
+  POLYGON,
+  ZKSYNC_ERA_GOERLI,
+} from '../chains.js';
 
 class WrappedSource extends Source {
   async fetch(): Promise<LabelMap> {
@@ -25,6 +31,7 @@ class WrappedSource extends Source {
           type: 'wrapped',
         },
       },
+      [ZKSYNC_ERA_GOERLI]: {},
       [POLYGON]: {
         '0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270': {
           value: 'Wrapped Matic',

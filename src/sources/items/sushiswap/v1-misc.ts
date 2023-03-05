@@ -3,6 +3,7 @@ import {
   ARBITRUM,
   ETHEREUM,
   OPTIMISM,
+  ZKSYNC_ERA_GOERLI,
   POLYGON,
 } from '../../../sources/chains.js';
 
@@ -44,6 +45,7 @@ class Source extends BaseSource {
         },
       },
       [OPTIMISM]: {},
+      [ZKSYNC_ERA_GOERLI]: {},
       [POLYGON]: {
         '0xc35dadb65012ec5796536bd9864ed8773abc74c4': {
           value: 'Sushiswap V1: Factory',

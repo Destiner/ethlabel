@@ -3,7 +3,14 @@ import 'dotenv/config';
 
 import { getErc20Metadata } from '../../utils/fetch.js';
 import { Label, LabelMap, Source } from '../base.js';
-import { ARBITRUM, ChainId, ETHEREUM, OPTIMISM, POLYGON } from '../chains.js';
+import {
+  ARBITRUM,
+  ChainId,
+  ETHEREUM,
+  OPTIMISM,
+  ZKSYNC_ERA_GOERLI,
+  POLYGON,
+} from '../chains.js';
 
 interface TokenList {
   name: string;
@@ -51,6 +58,7 @@ class TokenlistSource extends Source {
       [ARBITRUM]: {},
       [ETHEREUM]: {},
       [OPTIMISM]: {},
+      [ZKSYNC_ERA_GOERLI]: {},
       [POLYGON]: {},
     };
     const lists: TokenList[] = [];
@@ -65,6 +73,7 @@ class TokenlistSource extends Source {
       [ETHEREUM]: {},
       [OPTIMISM]: {},
       [POLYGON]: {},
+      [ZKSYNC_ERA_GOERLI]: {},
       [ARBITRUM]: {},
     };
     for (const chainId of chains) {

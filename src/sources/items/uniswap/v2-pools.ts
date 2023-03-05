@@ -9,6 +9,7 @@ import {
   CHAINS,
   ETHEREUM,
   OPTIMISM,
+  ZKSYNC_ERA_GOERLI,
   POLYGON,
 } from '../../../sources/chains.js';
 import { getSubgraphRecords } from '../../../utils/fetch.js';
@@ -35,6 +36,7 @@ class Source extends BaseSource {
       [ARBITRUM]: {},
       [ETHEREUM]: {},
       [OPTIMISM]: {},
+      [ZKSYNC_ERA_GOERLI]: {},
       [POLYGON]: {},
     };
     for (const chain of CHAINS) {
@@ -92,6 +94,8 @@ class Source extends BaseSource {
       case OPTIMISM:
         return null;
       case POLYGON:
+        return null;
+      case ZKSYNC_ERA_GOERLI:
         return null;
       case ARBITRUM:
         return null;

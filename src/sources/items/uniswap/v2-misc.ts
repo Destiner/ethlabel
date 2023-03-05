@@ -3,6 +3,7 @@ import {
   ARBITRUM,
   ETHEREUM,
   OPTIMISM,
+  ZKSYNC_ERA_GOERLI,
   POLYGON,
 } from '../../../sources/chains.js';
 
@@ -28,6 +29,7 @@ class Source extends BaseSource {
         },
       },
       [OPTIMISM]: {},
+      [ZKSYNC_ERA_GOERLI]: {},
       [POLYGON]: {},
     };
   }

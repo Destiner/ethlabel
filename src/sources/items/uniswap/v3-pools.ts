@@ -9,6 +9,7 @@ import {
   CHAINS,
   ETHEREUM,
   OPTIMISM,
+  ZKSYNC_ERA_GOERLI,
   POLYGON,
 } from '../../../sources/chains.js';
 import { getSubgraphRecords } from '../../../utils/fetch.js';
@@ -37,6 +38,7 @@ class Source extends BaseSource {
       [ARBITRUM]: {},
       [ETHEREUM]: {},
       [OPTIMISM]: {},
+      [ZKSYNC_ERA_GOERLI]: {},
       [POLYGON]: {},
     };
     for (const chain of CHAINS) {
@@ -53,6 +55,9 @@ class Source extends BaseSource {
     previousLabels: ChainLabelMap,
   ): Promise<ChainLabelMap> {
     const url = this.getSubgraphUrl(chain);
+    if (!url) {
+      return {};
+    }
     const records = await getSubgraphRecords<PoolRaw>(
       url,
       'pools',
@@ -85,7 +90,7 @@ class Source extends BaseSource {
     );
   }
 
-  private getSubgraphUrl(chain: ChainId): string {
+  private getSubgraphUrl(chain: ChainId): string | null {
     switch (chain) {
       case ETHEREUM:
         return 'uniswap/uniswap-v3';
@@ -93,6 +98,8 @@ class Source extends BaseSource {
         return 'ianlapham/optimism-post-regenesis';
       case POLYGON:
         return 'ianlapham/uniswap-v3-polygon';
+      case ZKSYNC_ERA_GOERLI:
+        return null;
       case ARBITRUM:
         return 'ianlapham/arbitrum-dev';
     }

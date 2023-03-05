@@ -14,6 +14,11 @@ class StaticSource extends Source {
       [ETHEREUM]: {},
       [OPTIMISM]: {},
       [ZKSYNC_ERA_GOERLI]: {
+        '0x000000000000000000000000000000000000800a': {
+          value: 'Ether',
+          keywords: ['ETH'],
+          type: 'erc20',
+        },
         '0x0faf6df7054946141266420b43783387a78d82a9': {
           value: 'USD Coin',
           keywords: ['USDC'],

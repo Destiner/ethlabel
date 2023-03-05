@@ -7,6 +7,7 @@ import {
   POLYGON,
   ChainId,
 } from './chains.js';
+import StaticSource from './items/static.js';
 import SushiswapV1MiscSource from './items/sushiswap/v1-misc.js';
 import SushiswapV1PoolSource from './items/sushiswap/v1-pools.js';
 import TokenlistSource from './items/tokenlists.js';
@@ -39,6 +40,7 @@ async function fetch(): Promise<LabelMap> {
 
 const sources: Source[] = [
   new TokenlistSource(),
+  new StaticSource(),
   new SushiswapV1MiscSource(),
   new SushiswapV1PoolSource(),
   new UniswapV2MiscSource(),

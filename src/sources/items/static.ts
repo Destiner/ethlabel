@@ -20,12 +20,12 @@ class StaticSource extends Source {
           type: 'erc20',
         },
         '0x3e7676937a7e96cfb7616f255b9ad9ff47363d4b': {
-          value: 'DAI Stablecoin',
+          value: 'Dai Stablecoin',
           keywords: ['DAI'],
           type: 'erc20',
         },
         '0x40609141db628beee3bfab8034fc2d8278d0cc78': {
-          value: 'Chainlink',
+          value: 'ChainLink Token',
           keywords: ['LINK'],
           type: 'erc20',
         },

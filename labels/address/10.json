@@ -880,24 +880,17 @@
     "keywords": [],
     "type": "uniswap-v3-misc"
   },
+  "0x68f5c0a2de713a54991e01858fd27a3832401849": {
+    "value": "Uniswap V3 WETH/OP 0.3%",
+    "keywords": [
+      "UNI-V3-WETH-OP-3000"
+    ],
+    "type": "uniswap-v3-pool"
+  },
   "0x85149247691df622eaf1a8bd0cafd40bc45154a9": {
     "value": "Uniswap V3 WETH/USDC 0.05%",
     "keywords": [
       "UNI-V3-WETH-USDC-500"
-    ],
-    "type": "uniswap-v3-pool"
-  },
-  "0x04f6c85a1b00f6d9b75f91fd23835974cc07e65c": {
-    "value": "Uniswap V3 wstETH/WETH 0.01%",
-    "keywords": [
-      "UNI-V3-wstETH-WETH-100"
-    ],
-    "type": "uniswap-v3-pool"
-  },
-  "0xbf16ef186e715668aa29cef57e2fd7f9d48adfe6": {
-    "value": "Uniswap V3 USDC/DAI 0.01%",
-    "keywords": [
-      "UNI-V3-USDC-DAI-100"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -908,10 +901,10 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0x68f5c0a2de713a54991e01858fd27a3832401849": {
-    "value": "Uniswap V3 WETH/OP 0.3%",
+  "0xbf16ef186e715668aa29cef57e2fd7f9d48adfe6": {
+    "value": "Uniswap V3 USDC/DAI 0.01%",
     "keywords": [
-      "UNI-V3-WETH-OP-3000"
+      "UNI-V3-USDC-DAI-100"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -922,10 +915,10 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0x0392b358ce4547601befa962680bede836606ae2": {
-    "value": "Uniswap V3 WETH/SNX 0.3%",
+  "0x73b14a78a0d396c521f954532d43fd5ffe385216": {
+    "value": "Uniswap V3 WETH/WBTC 0.3%",
     "keywords": [
-      "UNI-V3-WETH-SNX-3000"
+      "UNI-V3-WETH-WBTC-3000"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -943,6 +936,20 @@
     ],
     "type": "uniswap-v3-pool"
   },
+  "0xaefc1edaede6adadcdf3bb344577d45a80b19582": {
+    "value": "Uniswap V3 WETH/rETH 0.05%",
+    "keywords": [
+      "UNI-V3-WETH-rETH-500"
+    ],
+    "type": "uniswap-v3-pool"
+  },
+  "0x04f6c85a1b00f6d9b75f91fd23835974cc07e65c": {
+    "value": "Uniswap V3 wstETH/WETH 0.01%",
+    "keywords": [
+      "UNI-V3-wstETH-WETH-100"
+    ],
+    "type": "uniswap-v3-pool"
+  },
   "0x252cbdff917169775be2b552ec9f6781af95e7f6": {
     "value": "Uniswap V3 USDC/sUSD 0.01%",
     "keywords": [
@@ -954,13 +961,6 @@
     "value": "Uniswap V3 WETH/USDC 0.3%",
     "keywords": [
       "UNI-V3-WETH-USDC-3000"
-    ],
-    "type": "uniswap-v3-pool"
-  },
-  "0xaefc1edaede6adadcdf3bb344577d45a80b19582": {
-    "value": "Uniswap V3 WETH/rETH 0.05%",
-    "keywords": [
-      "UNI-V3-WETH-rETH-500"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -978,31 +978,10 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0x73b14a78a0d396c521f954532d43fd5ffe385216": {
-    "value": "Uniswap V3 WETH/WBTC 0.3%",
-    "keywords": [
-      "UNI-V3-WETH-WBTC-3000"
-    ],
-    "type": "uniswap-v3-pool"
-  },
-  "0x03a9dc118b231480058e7a3b051042ec83663794": {
-    "value": "Uniswap V3 wstETH/WBTC 0.05%",
-    "keywords": [
-      "UNI-V3-wstETH-WBTC-500"
-    ],
-    "type": "uniswap-v3-pool"
-  },
   "0xc858a329bf053be78d6239c4a4343b8fbd21472b": {
     "value": "Uniswap V3 WETH/USDT 0.05%",
     "keywords": [
       "UNI-V3-WETH-USDT-500"
-    ],
-    "type": "uniswap-v3-pool"
-  },
-  "0x95d7d146ae40d4822c2750276b54b6eed530d374": {
-    "value": "Uniswap V3 wstETH/USDT 0.05%",
-    "keywords": [
-      "UNI-V3-wstETH-USDT-500"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -1017,6 +996,20 @@
     "value": "Uniswap V3 WETH/OP 1%",
     "keywords": [
       "UNI-V3-WETH-OP-10000"
+    ],
+    "type": "uniswap-v3-pool"
+  },
+  "0x03a9dc118b231480058e7a3b051042ec83663794": {
+    "value": "Uniswap V3 wstETH/WBTC 0.05%",
+    "keywords": [
+      "UNI-V3-wstETH-WBTC-500"
+    ],
+    "type": "uniswap-v3-pool"
+  },
+  "0x0392b358ce4547601befa962680bede836606ae2": {
+    "value": "Uniswap V3 WETH/SNX 0.3%",
+    "keywords": [
+      "UNI-V3-WETH-SNX-3000"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -1041,24 +1034,17 @@
     ],
     "type": "uniswap-v3-pool"
   },
+  "0xe94a0449161ecf0f68a63acad8fd65b52433b7eb": {
+    "value": "Uniswap V3: Pool",
+    "keywords": [
+      "UNI-V3"
+    ],
+    "type": "uniswap-v3-pool"
+  },
   "0x320616dbe138aa2f3db7a5a46ba79a13032cc5f2": {
     "value": "Uniswap V3 USDC/SNX 0.3%",
     "keywords": [
       "UNI-V3-USDC-SNX-3000"
-    ],
-    "type": "uniswap-v3-pool"
-  },
-  "0x85c31ffa3706d1cce9d525a00f1c7d4a2911754c": {
-    "value": "Uniswap V3 WETH/WBTC 0.05%",
-    "keywords": [
-      "UNI-V3-WETH-WBTC-500"
-    ],
-    "type": "uniswap-v3-pool"
-  },
-  "0xdbfd980227ca19a58bbe06bb5738f36bc1adc4fc": {
-    "value": "Uniswap V3: Pool",
-    "keywords": [
-      "UNI-V3"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -1076,6 +1062,13 @@
     ],
     "type": "uniswap-v3-pool"
   },
+  "0x85c31ffa3706d1cce9d525a00f1c7d4a2911754c": {
+    "value": "Uniswap V3 WETH/WBTC 0.05%",
+    "keywords": [
+      "UNI-V3-WETH-WBTC-500"
+    ],
+    "type": "uniswap-v3-pool"
+  },
   "0xc50958e82c36b8d6d0baf555f90b76b0a28ceeeb": {
     "value": "Uniswap V3 THALES/USDC 0.3%",
     "keywords": [
@@ -1083,24 +1076,17 @@
     ],
     "type": "uniswap-v3-pool"
   },
+  "0x95d7d146ae40d4822c2750276b54b6eed530d374": {
+    "value": "Uniswap V3 wstETH/USDT 0.05%",
+    "keywords": [
+      "UNI-V3-wstETH-USDT-500"
+    ],
+    "type": "uniswap-v3-pool"
+  },
   "0xadb35413ec50e0afe41039eac8b930d313e94fa4": {
     "value": "Uniswap V3 sUSD/DAI 0.05%",
     "keywords": [
       "UNI-V3-sUSD-DAI-500"
-    ],
-    "type": "uniswap-v3-pool"
-  },
-  "0x7f1c919a92bce8790a85d6360b85cf21b997a6b5": {
-    "value": "Uniswap V3 OP/BOB 0.05%",
-    "keywords": [
-      "UNI-V3-OP-BOB-500"
-    ],
-    "type": "uniswap-v3-pool"
-  },
-  "0x72faac4e7f6ec87f71e23bfa04c27497d84b227b": {
-    "value": "Uniswap V3 WETH/cbETH 0.01%",
-    "keywords": [
-      "UNI-V3-WETH-cbETH-100"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -1125,10 +1111,24 @@
     ],
     "type": "uniswap-v3-pool"
   },
+  "0xf44acaa38be5e965c5ddf374e7a2ba270e580684": {
+    "value": "Uniswap V3: Pool",
+    "keywords": [
+      "UNI-V3"
+    ],
+    "type": "uniswap-v3-pool"
+  },
   "0xb2ac2e5a3684411254d58b1c5a542212b782114d": {
     "value": "Uniswap V3 OP/USDT 0.3%",
     "keywords": [
       "UNI-V3-OP-USDT-3000"
+    ],
+    "type": "uniswap-v3-pool"
+  },
+  "0x7f1c919a92bce8790a85d6360b85cf21b997a6b5": {
+    "value": "Uniswap V3 OP/BOB 0.05%",
+    "keywords": [
+      "UNI-V3-OP-BOB-500"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -1139,13 +1139,6 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0x381af0787add5bbbfa6ff88bd1284449a486372b": {
-    "value": "Uniswap V3 DAI/XCHF 0.05%",
-    "keywords": [
-      "UNI-V3-DAI-XCHF-500"
-    ],
-    "type": "uniswap-v3-pool"
-  },
   "0xe1a0c25464a9d3b1426b552416bf2a02865ed461": {
     "value": "Uniswap V3 USDC/PERP 0.3%",
     "keywords": [
@@ -1153,7 +1146,14 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0xf44acaa38be5e965c5ddf374e7a2ba270e580684": {
+  "0x381af0787add5bbbfa6ff88bd1284449a486372b": {
+    "value": "Uniswap V3 DAI/XCHF 0.05%",
+    "keywords": [
+      "UNI-V3-DAI-XCHF-500"
+    ],
+    "type": "uniswap-v3-pool"
+  },
+  "0xdbfd980227ca19a58bbe06bb5738f36bc1adc4fc": {
     "value": "Uniswap V3: Pool",
     "keywords": [
       "UNI-V3"
@@ -1174,10 +1174,10 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0xe94a0449161ecf0f68a63acad8fd65b52433b7eb": {
-    "value": "Uniswap V3: Pool",
+  "0xe62bd99a9501ca33d98913105fc2bec5bae6e5dd": {
+    "value": "Uniswap V3 WETH/KROM 0.3%",
     "keywords": [
-      "UNI-V3"
+      "UNI-V3-WETH-KROM-3000"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -1192,6 +1192,13 @@
     "value": "Uniswap V3 wstETH/WETH 0.05%",
     "keywords": [
       "UNI-V3-wstETH-WETH-500"
+    ],
+    "type": "uniswap-v3-pool"
+  },
+  "0x72faac4e7f6ec87f71e23bfa04c27497d84b227b": {
+    "value": "Uniswap V3 WETH/cbETH 0.01%",
+    "keywords": [
+      "UNI-V3-WETH-cbETH-100"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -1223,17 +1230,17 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0x6ef7b14bcd8d989cef8f8ec8ba4bf371b2ac95fd": {
-    "value": "Uniswap V3 OP/KROM 0.3%",
-    "keywords": [
-      "UNI-V3-OP-KROM-3000"
-    ],
-    "type": "uniswap-v3-pool"
-  },
   "0xfc1f3296458f9b2a27a0b91dd7681c4020e09d05": {
     "value": "Uniswap V3 WETH/OP 0.05%",
     "keywords": [
       "UNI-V3-WETH-OP-500"
+    ],
+    "type": "uniswap-v3-pool"
+  },
+  "0x6ef7b14bcd8d989cef8f8ec8ba4bf371b2ac95fd": {
+    "value": "Uniswap V3 OP/KROM 0.3%",
+    "keywords": [
+      "UNI-V3-OP-KROM-3000"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -1251,13 +1258,6 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0x7acf1c81e722827ad460c0df10a20d0ab3631349": {
-    "value": "Uniswap V3 wstETH/cbETH 0.01%",
-    "keywords": [
-      "UNI-V3-wstETH-cbETH-100"
-    ],
-    "type": "uniswap-v3-pool"
-  },
   "0x25e412992634b93a025e2a538c53222a8c62e2d6": {
     "value": "Uniswap V3 SNX/sUSD 1%",
     "keywords": [
@@ -1272,17 +1272,17 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0x8f477a5d632b5691a10a571575d55dc9c3d86d7c": {
-    "value": "Uniswap V3 WETH/rETH 0.3%",
-    "keywords": [
-      "UNI-V3-WETH-rETH-3000"
-    ],
-    "type": "uniswap-v3-pool"
-  },
   "0x0893e340ee2b0263ddad2f3b8bd23dba11859aea": {
     "value": "Uniswap V3 OP/WBTC 0.3%",
     "keywords": [
       "UNI-V3-OP-WBTC-3000"
+    ],
+    "type": "uniswap-v3-pool"
+  },
+  "0x8f477a5d632b5691a10a571575d55dc9c3d86d7c": {
+    "value": "Uniswap V3 WETH/rETH 0.3%",
+    "keywords": [
+      "UNI-V3-WETH-rETH-3000"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -1300,17 +1300,17 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0x19ea026886cbb7a900ecb2458636d72b5cae223b": {
-    "value": "Uniswap V3 LINK/WETH 0.3%",
-    "keywords": [
-      "UNI-V3-LINK-WETH-3000"
-    ],
-    "type": "uniswap-v3-pool"
-  },
   "0x8323d063b1d12acce4742f1e3ed9bc46d71f4222": {
     "value": "Uniswap V3 USDT/DAI 0.01%",
     "keywords": [
       "UNI-V3-USDT-DAI-100"
+    ],
+    "type": "uniswap-v3-pool"
+  },
+  "0x19ea026886cbb7a900ecb2458636d72b5cae223b": {
+    "value": "Uniswap V3 LINK/WETH 0.3%",
+    "keywords": [
+      "UNI-V3-LINK-WETH-3000"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -1335,13 +1335,6 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0x61775175905a0f3f7705a6f010d918b6acda6e00": {
-    "value": "Uniswap V3: Pool",
-    "keywords": [
-      "UNI-V3"
-    ],
-    "type": "uniswap-v3-pool"
-  },
   "0x40a6d70506ba0e5e361e3913ca79a3282b3031b0": {
     "value": "Uniswap V3 USDC/HOP 0.3%",
     "keywords": [
@@ -1349,14 +1342,14 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0xe62bd99a9501ca33d98913105fc2bec5bae6e5dd": {
-    "value": "Uniswap V3 WETH/KROM 0.3%",
+  "0xfef95852ca036ff78c8de41bd8bef7aeaa3cf016": {
+    "value": "Uniswap V3: Pool",
     "keywords": [
-      "UNI-V3-WETH-KROM-3000"
+      "UNI-V3"
     ],
     "type": "uniswap-v3-pool"
   },
-  "0xfef95852ca036ff78c8de41bd8bef7aeaa3cf016": {
+  "0x61775175905a0f3f7705a6f010d918b6acda6e00": {
     "value": "Uniswap V3: Pool",
     "keywords": [
       "UNI-V3"
@@ -1426,13 +1419,6 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0xae2d9288be0587c2097ec46db7686ac2481f896e": {
-    "value": "Uniswap V3 OP/DAI 1%",
-    "keywords": [
-      "UNI-V3-OP-DAI-10000"
-    ],
-    "type": "uniswap-v3-pool"
-  },
   "0x819ff7911fcc218665ecd6faad61730af544b3e1": {
     "value": "Uniswap V3 EST/DAI 0.3%",
     "keywords": [
@@ -1440,10 +1426,10 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0x3202c46666e774b44ba463eafaa6da9a968a058f": {
-    "value": "Uniswap V3 LINK/WETH 1%",
+  "0xae2d9288be0587c2097ec46db7686ac2481f896e": {
+    "value": "Uniswap V3 OP/DAI 1%",
     "keywords": [
-      "UNI-V3-LINK-WETH-10000"
+      "UNI-V3-OP-DAI-10000"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -1454,6 +1440,13 @@
     ],
     "type": "uniswap-v3-pool"
   },
+  "0x3202c46666e774b44ba463eafaa6da9a968a058f": {
+    "value": "Uniswap V3 LINK/WETH 1%",
+    "keywords": [
+      "UNI-V3-LINK-WETH-10000"
+    ],
+    "type": "uniswap-v3-pool"
+  },
   "0xa7bb0d95c6ba0ed0aca70c503b34bc7108589a47": {
     "value": "Uniswap V3 WBTC/USDC 0.05%",
     "keywords": [
@@ -1461,17 +1454,17 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0xec17ff564ae48de7d157da2691b41fdb89f3cd16": {
-    "value": "Uniswap V3: Pool",
-    "keywords": [
-      "UNI-V3"
-    ],
-    "type": "uniswap-v3-pool"
-  },
   "0xb80710b58caa124ae56e65335df38da775a68019": {
     "value": "Uniswap V3 USDC/SPANK 1%",
     "keywords": [
       "UNI-V3-USDC-SPANK-10000"
+    ],
+    "type": "uniswap-v3-pool"
+  },
+  "0xec17ff564ae48de7d157da2691b41fdb89f3cd16": {
+    "value": "Uniswap V3: Pool",
+    "keywords": [
+      "UNI-V3"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -1496,17 +1489,17 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0x815ae7bf44dda74ed9274377ed711efc8b567911": {
-    "value": "Uniswap V3 WETH/DAI 1%",
-    "keywords": [
-      "UNI-V3-WETH-DAI-10000"
-    ],
-    "type": "uniswap-v3-pool"
-  },
   "0x501f473fa84a6a05c40650b03d4d363744f03d17": {
     "value": "Uniswap V3 USDC/MAI 0.01%",
     "keywords": [
       "UNI-V3-USDC-MAI-100"
+    ],
+    "type": "uniswap-v3-pool"
+  },
+  "0x815ae7bf44dda74ed9274377ed711efc8b567911": {
+    "value": "Uniswap V3 WETH/DAI 1%",
+    "keywords": [
+      "UNI-V3-WETH-DAI-10000"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -1531,13 +1524,6 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0x7f53ca6b1bcf6e91abfb8ad03d4348f89e512f70": {
-    "value": "Uniswap V3: Pool",
-    "keywords": [
-      "UNI-V3"
-    ],
-    "type": "uniswap-v3-pool"
-  },
   "0xe7ee03b72a89f87d161425e42548bd5492d06679": {
     "value": "Uniswap V3 sUSD/DAI 0.3%",
     "keywords": [
@@ -1545,7 +1531,7 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0x825376dbb35c872cf36457280bed7d6d825fdcf0": {
+  "0x7f53ca6b1bcf6e91abfb8ad03d4348f89e512f70": {
     "value": "Uniswap V3: Pool",
     "keywords": [
       "UNI-V3"
@@ -1573,10 +1559,10 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0x8cd60b906ec0fa4e59f5489e5168df1f4f933547": {
-    "value": "Uniswap V3 WETH/LDO 0.3%",
+  "0x825376dbb35c872cf36457280bed7d6d825fdcf0": {
+    "value": "Uniswap V3: Pool",
     "keywords": [
-      "UNI-V3-WETH-LDO-3000"
+      "UNI-V3"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -1587,17 +1573,10 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0x7c784d979656984c778cfa25da69af34423e765f": {
-    "value": "Uniswap V3: Pool",
+  "0x8cd60b906ec0fa4e59f5489e5168df1f4f933547": {
+    "value": "Uniswap V3 WETH/LDO 0.3%",
     "keywords": [
-      "UNI-V3"
-    ],
-    "type": "uniswap-v3-pool"
-  },
-  "0x81a53cf23579cb251068a2d62ae8b2071ebe5a7d": {
-    "value": "Uniswap V3 WETH/BitANT 0.3%",
-    "keywords": [
-      "UNI-V3-WETH-BitANT-3000"
+      "UNI-V3-WETH-LDO-3000"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -1608,6 +1587,13 @@
     ],
     "type": "uniswap-v3-pool"
   },
+  "0x81a53cf23579cb251068a2d62ae8b2071ebe5a7d": {
+    "value": "Uniswap V3 WETH/BitANT 0.3%",
+    "keywords": [
+      "UNI-V3-WETH-BitANT-3000"
+    ],
+    "type": "uniswap-v3-pool"
+  },
   "0xf046d8b7365d8abe5a8f8301c669b4b5284fc21d": {
     "value": "Uniswap V3 sUSD/USDT 0.05%",
     "keywords": [
@@ -1615,10 +1601,10 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0x987f741774acd3dac89bcbe6b38bcb314900ad66": {
-    "value": "Uniswap V3: Pool",
+  "0xfea834a5c47b923add607cc5b96288d18ffb9c3f": {
+    "value": "Uniswap V3 WETH/SNX 1%",
     "keywords": [
-      "UNI-V3"
+      "UNI-V3-WETH-SNX-10000"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -1629,17 +1615,17 @@
     ],
     "type": "uniswap-v3-pool"
   },
+  "0x987f741774acd3dac89bcbe6b38bcb314900ad66": {
+    "value": "Uniswap V3: Pool",
+    "keywords": [
+      "UNI-V3"
+    ],
+    "type": "uniswap-v3-pool"
+  },
   "0xc66e44eb76b9df7f627b04e6f3165ab2b2dce30e": {
     "value": "Uniswap V3 WETH/LDO 1%",
     "keywords": [
       "UNI-V3-WETH-LDO-10000"
-    ],
-    "type": "uniswap-v3-pool"
-  },
-  "0xfea834a5c47b923add607cc5b96288d18ffb9c3f": {
-    "value": "Uniswap V3 WETH/SNX 1%",
-    "keywords": [
-      "UNI-V3-WETH-SNX-10000"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -1706,6 +1692,13 @@
     ],
     "type": "uniswap-v3-pool"
   },
+  "0x7c784d979656984c778cfa25da69af34423e765f": {
+    "value": "Uniswap V3: Pool",
+    "keywords": [
+      "UNI-V3"
+    ],
+    "type": "uniswap-v3-pool"
+  },
   "0xba9bbd07331f0185701b61be6379ac49d50ae327": {
     "value": "Uniswap V3 LINK/USDC 1%",
     "keywords": [
@@ -1734,17 +1727,17 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0x8531e48a8611729185be9eaad945acbd6b32e256": {
-    "value": "Uniswap V3 LINK/WETH 0.05%",
-    "keywords": [
-      "UNI-V3-LINK-WETH-500"
-    ],
-    "type": "uniswap-v3-pool"
-  },
   "0xb11d715bd9e3fd4fd07401dc551d516780c12449": {
     "value": "Uniswap V3 USDC/sUSD 0.3%",
     "keywords": [
       "UNI-V3-USDC-sUSD-3000"
+    ],
+    "type": "uniswap-v3-pool"
+  },
+  "0x8531e48a8611729185be9eaad945acbd6b32e256": {
+    "value": "Uniswap V3 LINK/WETH 0.05%",
+    "keywords": [
+      "UNI-V3-LINK-WETH-500"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -1769,10 +1762,10 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0x782dcc2cd3a65405baeb794269703e9c29a175cc": {
-    "value": "Uniswap V3 WETH/AAVE 0.3%",
+  "0x54d17b69d526edf5c8c91bd2ebb5b765fd21e4dc": {
+    "value": "Uniswap V3 VELO/OP 0.3%",
     "keywords": [
-      "UNI-V3-WETH-AAVE-3000"
+      "UNI-V3-VELO-OP-3000"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -1783,10 +1776,10 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0x54d17b69d526edf5c8c91bd2ebb5b765fd21e4dc": {
-    "value": "Uniswap V3 VELO/OP 0.3%",
+  "0x782dcc2cd3a65405baeb794269703e9c29a175cc": {
+    "value": "Uniswap V3 WETH/AAVE 0.3%",
     "keywords": [
-      "UNI-V3-VELO-OP-3000"
+      "UNI-V3-WETH-AAVE-3000"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -1797,10 +1790,10 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0xd1788a1109bd36ab296ac104a67bf8dc48673948": {
-    "value": "Uniswap V3 USDC/COLLAB 1%",
+  "0x5959764b000f345a73da530c3c9083659c1c15be": {
+    "value": "Uniswap V3: Pool",
     "keywords": [
-      "UNI-V3-USDC-COLLAB-10000"
+      "UNI-V3"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -1808,6 +1801,20 @@
     "value": "Uniswap V3 VELO/OP 1%",
     "keywords": [
       "UNI-V3-VELO-OP-10000"
+    ],
+    "type": "uniswap-v3-pool"
+  },
+  "0xd1788a1109bd36ab296ac104a67bf8dc48673948": {
+    "value": "Uniswap V3 USDC/COLLAB 1%",
+    "keywords": [
+      "UNI-V3-USDC-COLLAB-10000"
+    ],
+    "type": "uniswap-v3-pool"
+  },
+  "0x0fcd58c457d71bf630a44a41437537e0d5be7ed8": {
+    "value": "Uniswap V3: Pool",
+    "keywords": [
+      "UNI-V3"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -1839,10 +1846,10 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0x0fcd58c457d71bf630a44a41437537e0d5be7ed8": {
-    "value": "Uniswap V3: Pool",
+  "0xea0f33940eb221aaad9360891cab08ef4f1f0703": {
+    "value": "Uniswap V3 USDT/DAI 0.3%",
     "keywords": [
-      "UNI-V3"
+      "UNI-V3-USDT-DAI-3000"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -1850,13 +1857,6 @@
     "value": "Uniswap V3 CRV/WETH 1%",
     "keywords": [
       "UNI-V3-CRV-WETH-10000"
-    ],
-    "type": "uniswap-v3-pool"
-  },
-  "0xea0f33940eb221aaad9360891cab08ef4f1f0703": {
-    "value": "Uniswap V3 USDT/DAI 0.3%",
-    "keywords": [
-      "UNI-V3-USDT-DAI-3000"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -1881,13 +1881,6 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0xe9033c0011f35547fa90d3f8a6ad4b666a590759": {
-    "value": "Uniswap V3 PAPER/OP 1%",
-    "keywords": [
-      "UNI-V3-PAPER-OP-10000"
-    ],
-    "type": "uniswap-v3-pool"
-  },
   "0xc22662b904d98e45f89e030201355c3e372cc819": {
     "value": "Uniswap V3 WBTC/DAI 0.3%",
     "keywords": [
@@ -1909,17 +1902,17 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0xe38c24bdcfe35e5d9bd913462cfb6da08196c217": {
-    "value": "Uniswap V3 WETH/cbETH 0.05%",
-    "keywords": [
-      "UNI-V3-WETH-cbETH-500"
-    ],
-    "type": "uniswap-v3-pool"
-  },
   "0x44b17031465c53706af85c05423d26e9cfa13a1b": {
     "value": "Uniswap V3 OP/USDT 1%",
     "keywords": [
       "UNI-V3-OP-USDT-10000"
+    ],
+    "type": "uniswap-v3-pool"
+  },
+  "0xe9033c0011f35547fa90d3f8a6ad4b666a590759": {
+    "value": "Uniswap V3 PAPER/OP 1%",
+    "keywords": [
+      "UNI-V3-PAPER-OP-10000"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -1958,10 +1951,10 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0xf3724a1c36c21b7ce558602cd6c031d5778660f4": {
-    "value": "Uniswap V3 WETH/ENS 1%",
+  "0x2582886f65ea71ecd3cffd12089c55fb9c75e9db": {
+    "value": "Uniswap V3 USD+/USDC 0.01%",
     "keywords": [
-      "UNI-V3-WETH-ENS-10000"
+      "UNI-V3-USD+-USDC-100"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -1969,13 +1962,6 @@
     "value": "Uniswap V3 LINK/DAI 0.3%",
     "keywords": [
       "UNI-V3-LINK-DAI-3000"
-    ],
-    "type": "uniswap-v3-pool"
-  },
-  "0x2582886f65ea71ecd3cffd12089c55fb9c75e9db": {
-    "value": "Uniswap V3 USD+/USDC 0.01%",
-    "keywords": [
-      "UNI-V3-USD+-USDC-100"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -2007,6 +1993,13 @@
     ],
     "type": "uniswap-v3-pool"
   },
+  "0xf3724a1c36c21b7ce558602cd6c031d5778660f4": {
+    "value": "Uniswap V3 WETH/ENS 1%",
+    "keywords": [
+      "UNI-V3-WETH-ENS-10000"
+    ],
+    "type": "uniswap-v3-pool"
+  },
   "0x764c0e2900ec31766f5cb9d24a3cc4f20dc8d6b9": {
     "value": "Uniswap V3 WETH/PERP 1%",
     "keywords": [
@@ -2014,17 +2007,17 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0x5959764b000f345a73da530c3c9083659c1c15be": {
-    "value": "Uniswap V3: Pool",
-    "keywords": [
-      "UNI-V3"
-    ],
-    "type": "uniswap-v3-pool"
-  },
   "0x64750f4098a7f98352f7cd5797f421ceb8d94f64": {
     "value": "Uniswap V3 WETH/USDT 0.01%",
     "keywords": [
       "UNI-V3-WETH-USDT-100"
+    ],
+    "type": "uniswap-v3-pool"
+  },
+  "0xc0dec08cd0b2c52b7fe0025de126c794e9dc39cd": {
+    "value": "Uniswap V3 USDC/BUSD 0.05%",
+    "keywords": [
+      "UNI-V3-USDC-BUSD-500"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -2049,13 +2042,6 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0x34f7ffe0ab212476a878f6277568f55d6927b251": {
-    "value": "Uniswap V3 WETH/ENS 0.3%",
-    "keywords": [
-      "UNI-V3-WETH-ENS-3000"
-    ],
-    "type": "uniswap-v3-pool"
-  },
   "0x88af67b59c95eda0a9544e5c33679b128517f37a": {
     "value": "Uniswap V3 GYSR/WETH 1%",
     "keywords": [
@@ -2063,10 +2049,10 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0xc0dec08cd0b2c52b7fe0025de126c794e9dc39cd": {
-    "value": "Uniswap V3 USDC/BUSD 0.05%",
+  "0x34f7ffe0ab212476a878f6277568f55d6927b251": {
+    "value": "Uniswap V3 WETH/ENS 0.3%",
     "keywords": [
-      "UNI-V3-USDC-BUSD-500"
+      "UNI-V3-WETH-ENS-3000"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -2084,6 +2070,13 @@
     ],
     "type": "uniswap-v3-pool"
   },
+  "0x4ad43a229a55d9453ad1ddd9aea986d58faab8d4": {
+    "value": "Uniswap V3 OP/sUSD 1%",
+    "keywords": [
+      "UNI-V3-OP-sUSD-10000"
+    ],
+    "type": "uniswap-v3-pool"
+  },
   "0xcc8a87a17208fe2e96168ca3fa9412a968c5b092": {
     "value": "Uniswap V3 LYRA/USDC 0.3%",
     "keywords": [
@@ -2091,10 +2084,10 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0x4ad43a229a55d9453ad1ddd9aea986d58faab8d4": {
-    "value": "Uniswap V3 OP/sUSD 1%",
+  "0xe38c24bdcfe35e5d9bd913462cfb6da08196c217": {
+    "value": "Uniswap V3 WETH/cbETH 0.05%",
     "keywords": [
-      "UNI-V3-OP-sUSD-10000"
+      "UNI-V3-WETH-cbETH-500"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -2112,13 +2105,6 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0x37ffd11972128fd624337ebceb167c8c0a5115ff": {
-    "value": "Uniswap V3 WETH/WBTC 1%",
-    "keywords": [
-      "UNI-V3-WETH-WBTC-10000"
-    ],
-    "type": "uniswap-v3-pool"
-  },
   "0x8130d8b6e5cdd6ed5fcdbb7a041512cc5a38b924": {
     "value": "Uniswap V3: Pool",
     "keywords": [
@@ -2126,17 +2112,17 @@
     ],
     "type": "uniswap-v3-pool"
   },
+  "0x37ffd11972128fd624337ebceb167c8c0a5115ff": {
+    "value": "Uniswap V3 WETH/WBTC 1%",
+    "keywords": [
+      "UNI-V3-WETH-WBTC-10000"
+    ],
+    "type": "uniswap-v3-pool"
+  },
   "0x7628784d2c5d47fcd5479ba812343b1aabad6484": {
     "value": "Uniswap V3 WBTC/sUSD 0.3%",
     "keywords": [
       "UNI-V3-WBTC-sUSD-3000"
-    ],
-    "type": "uniswap-v3-pool"
-  },
-  "0xae0ebaa4162941837bb56eda1bc9dc6850779bd2": {
-    "value": "Uniswap V3 POP/USDC 0.3%",
-    "keywords": [
-      "UNI-V3-POP-USDC-3000"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -2154,17 +2140,24 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0x870d55ab3b71e9b29893c8e1e83e8a99b39ed40d": {
-    "value": "Uniswap V3 WETH/COLLAB 0.3%",
-    "keywords": [
-      "UNI-V3-WETH-COLLAB-3000"
-    ],
-    "type": "uniswap-v3-pool"
-  },
   "0xd6fe70479238da7fce73b580b88f00c37a62f9ba": {
     "value": "Uniswap V3 OP/USD+ 0.3%",
     "keywords": [
       "UNI-V3-OP-USD+-3000"
+    ],
+    "type": "uniswap-v3-pool"
+  },
+  "0xae0ebaa4162941837bb56eda1bc9dc6850779bd2": {
+    "value": "Uniswap V3 POP/USDC 0.3%",
+    "keywords": [
+      "UNI-V3-POP-USDC-3000"
+    ],
+    "type": "uniswap-v3-pool"
+  },
+  "0x870d55ab3b71e9b29893c8e1e83e8a99b39ed40d": {
+    "value": "Uniswap V3 WETH/COLLAB 0.3%",
+    "keywords": [
+      "UNI-V3-WETH-COLLAB-3000"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -2203,6 +2196,13 @@
     ],
     "type": "uniswap-v3-pool"
   },
+  "0x08776905f9bf5471682da9d8821171113e61f1b3": {
+    "value": "Uniswap V3: Pool",
+    "keywords": [
+      "UNI-V3"
+    ],
+    "type": "uniswap-v3-pool"
+  },
   "0x2024c394741a5301e89a375b7bf52f865bc166fd": {
     "value": "Uniswap V3 UNI/USDC 0.3%",
     "keywords": [
@@ -2231,13 +2231,6 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0xba213008fe93b3591e439f3b2aa51b3e4a2bd7c7": {
-    "value": "Uniswap V3 LINK/USDC 0.3%",
-    "keywords": [
-      "UNI-V3-LINK-USDC-3000"
-    ],
-    "type": "uniswap-v3-pool"
-  },
   "0xba335a3b1f2fb04e66916c664459b7f74378ec32": {
     "value": "Uniswap V3 OP/DAI 0.05%",
     "keywords": [
@@ -2245,10 +2238,10 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0xb415601963e8a76e5a521ded2e29ccf3a25c9163": {
-    "value": "Uniswap V3: Pool",
+  "0xba213008fe93b3591e439f3b2aa51b3e4a2bd7c7": {
+    "value": "Uniswap V3 LINK/USDC 0.3%",
     "keywords": [
-      "UNI-V3"
+      "UNI-V3-LINK-USDC-3000"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -2256,6 +2249,13 @@
     "value": "Uniswap V3 OP/sUSD 0.3%",
     "keywords": [
       "UNI-V3-OP-sUSD-3000"
+    ],
+    "type": "uniswap-v3-pool"
+  },
+  "0xb415601963e8a76e5a521ded2e29ccf3a25c9163": {
+    "value": "Uniswap V3: Pool",
+    "keywords": [
+      "UNI-V3"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -2357,6 +2357,13 @@
     ],
     "type": "uniswap-v3-pool"
   },
+  "0x179bd5f43bd11f95a8c19c4d910d9acb5ee5ad4f": {
+    "value": "Uniswap V3: Pool",
+    "keywords": [
+      "UNI-V3"
+    ],
+    "type": "uniswap-v3-pool"
+  },
   "0x1d26a8c06a8020a26c914ea67ec6d30963d2ddd4": {
     "value": "Uniswap V3 FRAX/WETH 0.3%",
     "keywords": [
@@ -2365,6 +2372,13 @@
     "type": "uniswap-v3-pool"
   },
   "0x926c2aeed9b4c10a025c3605dbc2953834ba2a8a": {
+    "value": "Uniswap V3: Pool",
+    "keywords": [
+      "UNI-V3"
+    ],
+    "type": "uniswap-v3-pool"
+  },
+  "0x8dc431816507b68fd366aaa02832c4928d5d2d13": {
     "value": "Uniswap V3: Pool",
     "keywords": [
       "UNI-V3"
@@ -2392,6 +2406,13 @@
     ],
     "type": "uniswap-v3-pool"
   },
+  "0xb9a8a18f93a00464072c2dc9aa63062ccb773450": {
+    "value": "Uniswap V3: Pool",
+    "keywords": [
+      "UNI-V3"
+    ],
+    "type": "uniswap-v3-pool"
+  },
   "0xa13514b5444e50067f6e48c386016b211773cf9e": {
     "value": "Uniswap V3 SNX/DAI 1%",
     "keywords": [
@@ -2403,13 +2424,6 @@
     "value": "Uniswap V3 OP/UBI 0.01%",
     "keywords": [
       "UNI-V3-OP-UBI-100"
-    ],
-    "type": "uniswap-v3-pool"
-  },
-  "0xb9a8a18f93a00464072c2dc9aa63062ccb773450": {
-    "value": "Uniswap V3: Pool",
-    "keywords": [
-      "UNI-V3"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -2469,10 +2483,10 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0x8dc431816507b68fd366aaa02832c4928d5d2d13": {
-    "value": "Uniswap V3: Pool",
+  "0x22a153e7d0f0ec6311b5b1083d082b2aa32f731d": {
+    "value": "Uniswap V3 USDC/SUKU 1%",
     "keywords": [
-      "UNI-V3"
+      "UNI-V3-USDC-SUKU-10000"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -2483,24 +2497,10 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0x22a153e7d0f0ec6311b5b1083d082b2aa32f731d": {
-    "value": "Uniswap V3 USDC/SUKU 1%",
-    "keywords": [
-      "UNI-V3-USDC-SUKU-10000"
-    ],
-    "type": "uniswap-v3-pool"
-  },
   "0x9e167eee4912253a00151600c9ea234fd9c0cab6": {
     "value": "Uniswap V3 COLLAB/USDT 1%",
     "keywords": [
       "UNI-V3-COLLAB-USDT-10000"
-    ],
-    "type": "uniswap-v3-pool"
-  },
-  "0x69d05109fba747b90df370d42c2f975b0bcd940e": {
-    "value": "Uniswap V3 USDC/KNC 0.3%",
-    "keywords": [
-      "UNI-V3-USDC-KNC-3000"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -2599,13 +2599,6 @@
     "value": "Uniswap V3 RAI/DAI 0.05%",
     "keywords": [
       "UNI-V3-RAI-DAI-500"
-    ],
-    "type": "uniswap-v3-pool"
-  },
-  "0x49892ce5dda76b64d914931232e8d28fd7fbe20c": {
-    "value": "Uniswap V3 OP/BUSD 0.3%",
-    "keywords": [
-      "UNI-V3-OP-BUSD-3000"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -2728,6 +2721,13 @@
     ],
     "type": "uniswap-v3-pool"
   },
+  "0x49892ce5dda76b64d914931232e8d28fd7fbe20c": {
+    "value": "Uniswap V3 OP/BUSD 0.3%",
+    "keywords": [
+      "UNI-V3-OP-BUSD-3000"
+    ],
+    "type": "uniswap-v3-pool"
+  },
   "0x65d024ad8806841c23fe748615435e0eaf2de3cb": {
     "value": "Uniswap V3 USDC/KROM 1%",
     "keywords": [
@@ -2777,13 +2777,6 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0x0932311f485fd4e54b0a001a9bbadb9cee4afb33": {
-    "value": "Uniswap V3 WETH/BAL 0.3%",
-    "keywords": [
-      "UNI-V3-WETH-BAL-3000"
-    ],
-    "type": "uniswap-v3-pool"
-  },
   "0x7c91de3f281791e2c212cd805f5d452247c9b9db": {
     "value": "Uniswap V3 WETH/DOLA 0.05%",
     "keywords": [
@@ -2795,6 +2788,13 @@
     "value": "Uniswap V3: Pool",
     "keywords": [
       "UNI-V3"
+    ],
+    "type": "uniswap-v3-pool"
+  },
+  "0x0932311f485fd4e54b0a001a9bbadb9cee4afb33": {
+    "value": "Uniswap V3 WETH/BAL 0.3%",
+    "keywords": [
+      "UNI-V3-WETH-BAL-3000"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -2819,6 +2819,20 @@
     ],
     "type": "uniswap-v3-pool"
   },
+  "0x69d05109fba747b90df370d42c2f975b0bcd940e": {
+    "value": "Uniswap V3 USDC/KNC 0.3%",
+    "keywords": [
+      "UNI-V3-USDC-KNC-3000"
+    ],
+    "type": "uniswap-v3-pool"
+  },
+  "0x42da0f9009befbcae5c970746aa1892f4a54ee3d": {
+    "value": "Uniswap V3: Pool",
+    "keywords": [
+      "UNI-V3"
+    ],
+    "type": "uniswap-v3-pool"
+  },
   "0x1646531cc38d9b13523d7818f8d4252b7530bd82": {
     "value": "Uniswap V3 WETH/HOP 0.3%",
     "keywords": [
@@ -2833,10 +2847,10 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0x42da0f9009befbcae5c970746aa1892f4a54ee3d": {
-    "value": "Uniswap V3: Pool",
+  "0x6be3d640f472962d8d937507da112c573b7ba431": {
+    "value": "Uniswap V3 USDT/BUSD 0.05%",
     "keywords": [
-      "UNI-V3"
+      "UNI-V3-USDT-BUSD-500"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -2931,6 +2945,13 @@
     ],
     "type": "uniswap-v3-pool"
   },
+  "0xa0959d2dcd9dd56bf080a10cfe29eeb401344e3d": {
+    "value": "Uniswap V3 USDT/DAI 1%",
+    "keywords": [
+      "UNI-V3-USDT-DAI-10000"
+    ],
+    "type": "uniswap-v3-pool"
+  },
   "0x91df5be156f4bce2b786defa8433b75d4c3d768e": {
     "value": "Uniswap V3: Pool",
     "keywords": [
@@ -2942,20 +2963,6 @@
     "value": "Uniswap V3 USDT/HOP 1%",
     "keywords": [
       "UNI-V3-USDT-HOP-10000"
-    ],
-    "type": "uniswap-v3-pool"
-  },
-  "0x6be3d640f472962d8d937507da112c573b7ba431": {
-    "value": "Uniswap V3 USDT/BUSD 0.05%",
-    "keywords": [
-      "UNI-V3-USDT-BUSD-500"
-    ],
-    "type": "uniswap-v3-pool"
-  },
-  "0xa0959d2dcd9dd56bf080a10cfe29eeb401344e3d": {
-    "value": "Uniswap V3 USDT/DAI 1%",
-    "keywords": [
-      "UNI-V3-USDT-DAI-10000"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -2987,17 +2994,10 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0xe7f4d234a2463b111ed9865ed4a17654895e25c9": {
-    "value": "Uniswap V3: Pool",
+  "0x7acf1c81e722827ad460c0df10a20d0ab3631349": {
+    "value": "Uniswap V3 wstETH/cbETH 0.01%",
     "keywords": [
-      "UNI-V3"
-    ],
-    "type": "uniswap-v3-pool"
-  },
-  "0x71fff2a6b2ed4a93841475c63c39eba37cd2f6ef": {
-    "value": "Uniswap V3: Pool",
-    "keywords": [
-      "UNI-V3"
+      "UNI-V3-wstETH-cbETH-100"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -3036,6 +3036,13 @@
     ],
     "type": "uniswap-v3-pool"
   },
+  "0xe7f4d234a2463b111ed9865ed4a17654895e25c9": {
+    "value": "Uniswap V3: Pool",
+    "keywords": [
+      "UNI-V3"
+    ],
+    "type": "uniswap-v3-pool"
+  },
   "0x40394db4f6cce4a5ab3e93583f7d3430e0370b75": {
     "value": "Uniswap V3: Pool",
     "keywords": [
@@ -3057,14 +3064,7 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0x9f7ebd489968c12a383aec1632ecadfb5a019c96": {
-    "value": "Uniswap V3 VELO/USDT 1%",
-    "keywords": [
-      "UNI-V3-VELO-USDT-10000"
-    ],
-    "type": "uniswap-v3-pool"
-  },
-  "0xbec1803f84ecaee6a2723d266fadc04f4a47baf8": {
+  "0x71fff2a6b2ed4a93841475c63c39eba37cd2f6ef": {
     "value": "Uniswap V3: Pool",
     "keywords": [
       "UNI-V3"
@@ -3078,10 +3078,17 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0x23b000ac91f1f4ea6a3569e3f56ac6b8cecb269c": {
-    "value": "Uniswap V3 CRV/sUSD 1%",
+  "0xbec1803f84ecaee6a2723d266fadc04f4a47baf8": {
+    "value": "Uniswap V3: Pool",
     "keywords": [
-      "UNI-V3-CRV-sUSD-10000"
+      "UNI-V3"
+    ],
+    "type": "uniswap-v3-pool"
+  },
+  "0x9f7ebd489968c12a383aec1632ecadfb5a019c96": {
+    "value": "Uniswap V3 VELO/USDT 1%",
+    "keywords": [
+      "UNI-V3-VELO-USDT-10000"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -3092,10 +3099,10 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0xdb59de3606c0419552226a6dbbeb5e6ae272cb9b": {
-    "value": "Uniswap V3: Pool",
+  "0x23b000ac91f1f4ea6a3569e3f56ac6b8cecb269c": {
+    "value": "Uniswap V3 CRV/sUSD 1%",
     "keywords": [
-      "UNI-V3"
+      "UNI-V3-CRV-sUSD-10000"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -3138,6 +3145,13 @@
     "value": "Uniswap V3 sBTC/WETH 1%",
     "keywords": [
       "UNI-V3-sBTC-WETH-10000"
+    ],
+    "type": "uniswap-v3-pool"
+  },
+  "0xdb59de3606c0419552226a6dbbeb5e6ae272cb9b": {
+    "value": "Uniswap V3: Pool",
+    "keywords": [
+      "UNI-V3"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -3197,13 +3211,6 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0xf3ade441be8c0579ca8d0b05ca33ed35dd90338c": {
-    "value": "Uniswap V3: Pool",
-    "keywords": [
-      "UNI-V3"
-    ],
-    "type": "uniswap-v3-pool"
-  },
   "0x3926a81afe5c9c3d05296e4fac4728ba5411ac78": {
     "value": "Uniswap V3 UNI/DAI 1%",
     "keywords": [
@@ -3239,17 +3246,17 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0xd154fc1504da0fa259942ba95057f79e3a5c33c7": {
-    "value": "Uniswap V3: Pool",
-    "keywords": [
-      "UNI-V3"
-    ],
-    "type": "uniswap-v3-pool"
-  },
   "0xebde76f12c01a20c3a1cc9447bbd8be4129dd4dc": {
     "value": "Uniswap V3 OP/UNI 0.05%",
     "keywords": [
       "UNI-V3-OP-UNI-500"
+    ],
+    "type": "uniswap-v3-pool"
+  },
+  "0xd154fc1504da0fa259942ba95057f79e3a5c33c7": {
+    "value": "Uniswap V3: Pool",
+    "keywords": [
+      "UNI-V3"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -3271,6 +3278,13 @@
     "value": "Uniswap V3 WETH/RAI 1%",
     "keywords": [
       "UNI-V3-WETH-RAI-10000"
+    ],
+    "type": "uniswap-v3-pool"
+  },
+  "0xf0d0e52da1fdde512af299f3d8ea1c5e3bebb96f": {
+    "value": "Uniswap V3: Pool",
+    "keywords": [
+      "UNI-V3"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -3327,20 +3341,6 @@
     "value": "Uniswap V3 USDC/HOP 1%",
     "keywords": [
       "UNI-V3-USDC-HOP-10000"
-    ],
-    "type": "uniswap-v3-pool"
-  },
-  "0x179bd5f43bd11f95a8c19c4d910d9acb5ee5ad4f": {
-    "value": "Uniswap V3: Pool",
-    "keywords": [
-      "UNI-V3"
-    ],
-    "type": "uniswap-v3-pool"
-  },
-  "0xf0d0e52da1fdde512af299f3d8ea1c5e3bebb96f": {
-    "value": "Uniswap V3: Pool",
-    "keywords": [
-      "UNI-V3"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -3547,6 +3547,13 @@
     ],
     "type": "uniswap-v3-pool"
   },
+  "0xf3ade441be8c0579ca8d0b05ca33ed35dd90338c": {
+    "value": "Uniswap V3: Pool",
+    "keywords": [
+      "UNI-V3"
+    ],
+    "type": "uniswap-v3-pool"
+  },
   "0xef832c96bae80b0d47dcb75695ff05b4162cb7c8": {
     "value": "Uniswap V3: Pool",
     "keywords": [
@@ -3673,13 +3680,6 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0x47678466c6308fc5e4cdac3cef2638d4388180d6": {
-    "value": "Uniswap V3: Pool",
-    "keywords": [
-      "UNI-V3"
-    ],
-    "type": "uniswap-v3-pool"
-  },
   "0xd7909581c1cc7a5a0a5bbdca675e0eb095633f43": {
     "value": "Uniswap V3 USDC/EQZ 1%",
     "keywords": [
@@ -3771,6 +3771,13 @@
     ],
     "type": "uniswap-v3-pool"
   },
+  "0xc078be501258777eabacc9372118ed4f2134e0b0": {
+    "value": "Uniswap V3: Pool",
+    "keywords": [
+      "UNI-V3"
+    ],
+    "type": "uniswap-v3-pool"
+  },
   "0x8184f5cf4921558c201923ef6d7d5258a6efa31f": {
     "value": "Uniswap V3 WBTC/USDT 0.05%",
     "keywords": [
@@ -3800,13 +3807,6 @@
     "type": "uniswap-v3-pool"
   },
   "0x4f3c43a8703099a1f21010a04e0e3fe3f6070edd": {
-    "value": "Uniswap V3: Pool",
-    "keywords": [
-      "UNI-V3"
-    ],
-    "type": "uniswap-v3-pool"
-  },
-  "0xc078be501258777eabacc9372118ed4f2134e0b0": {
     "value": "Uniswap V3: Pool",
     "keywords": [
       "UNI-V3"
@@ -4163,13 +4163,6 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0x1ba16453634f384811517183db5dc907f161c017": {
-    "value": "Uniswap V3: Pool",
-    "keywords": [
-      "UNI-V3"
-    ],
-    "type": "uniswap-v3-pool"
-  },
   "0xe2d4194dbea9a9f982653c92b982c39e0ce5dca0": {
     "value": "Uniswap V3 MKR/DAI 0.3%",
     "keywords": [
@@ -4303,6 +4296,13 @@
     ],
     "type": "uniswap-v3-pool"
   },
+  "0x5aacc66073cb0c3064353f1441c2e04170b4dbbf": {
+    "value": "Uniswap V3 WETH/sLINK 0.3%",
+    "keywords": [
+      "UNI-V3-WETH-sLINK-3000"
+    ],
+    "type": "uniswap-v3-pool"
+  },
   "0xb311753ec59efaef03af561b27bf8b395e8b9351": {
     "value": "Uniswap V3: Pool",
     "keywords": [
@@ -4381,6 +4381,13 @@
     "type": "uniswap-v3-pool"
   },
   "0x31ff8acc0504f28b00fe42cd3ad53530405e8842": {
+    "value": "Uniswap V3: Pool",
+    "keywords": [
+      "UNI-V3"
+    ],
+    "type": "uniswap-v3-pool"
+  },
+  "0x1ba16453634f384811517183db5dc907f161c017": {
     "value": "Uniswap V3: Pool",
     "keywords": [
       "UNI-V3"
@@ -4499,13 +4506,6 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0x34f3c063a7a77279676d0e224e7b56351ce9540c": {
-    "value": "Uniswap V3 OP/UNI 0.01%",
-    "keywords": [
-      "UNI-V3-OP-UNI-100"
-    ],
-    "type": "uniswap-v3-pool"
-  },
   "0x59f1148a9fa3761391641e16277cd7ab6ed02e6f": {
     "value": "Uniswap V3: Pool",
     "keywords": [
@@ -4559,6 +4559,13 @@
     "value": "Uniswap V3: Pool",
     "keywords": [
       "UNI-V3"
+    ],
+    "type": "uniswap-v3-pool"
+  },
+  "0x34f3c063a7a77279676d0e224e7b56351ce9540c": {
+    "value": "Uniswap V3 OP/UNI 0.01%",
+    "keywords": [
+      "UNI-V3-OP-UNI-100"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -4653,13 +4660,6 @@
     ],
     "type": "uniswap-v3-pool"
   },
-  "0x40ce25c4629248902512b39de21b6484d8a5d52f": {
-    "value": "Uniswap V3 WETH/COLLAB 0.01%",
-    "keywords": [
-      "UNI-V3-WETH-COLLAB-100"
-    ],
-    "type": "uniswap-v3-pool"
-  },
   "0x394c73ad39b590c747aa2fb8875a6143046a5ce3": {
     "value": "Uniswap V3: Pool",
     "keywords": [
@@ -4671,13 +4671,6 @@
     "value": "Uniswap V3 LYRA/USDC 0.05%",
     "keywords": [
       "UNI-V3-LYRA-USDC-500"
-    ],
-    "type": "uniswap-v3-pool"
-  },
-  "0x5aacc66073cb0c3064353f1441c2e04170b4dbbf": {
-    "value": "Uniswap V3 WETH/sLINK 0.3%",
-    "keywords": [
-      "UNI-V3-WETH-sLINK-3000"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -4723,6 +4716,13 @@
     ],
     "type": "uniswap-v3-pool"
   },
+  "0x47678466c6308fc5e4cdac3cef2638d4388180d6": {
+    "value": "Uniswap V3: Pool",
+    "keywords": [
+      "UNI-V3"
+    ],
+    "type": "uniswap-v3-pool"
+  },
   "0x570b06e335ca7b2633213fe538d4053155ce19e6": {
     "value": "Uniswap V3 WETH/BitBTC 1%",
     "keywords": [
@@ -4741,6 +4741,13 @@
     "value": "Uniswap V3: Pool",
     "keywords": [
       "UNI-V3"
+    ],
+    "type": "uniswap-v3-pool"
+  },
+  "0x40ce25c4629248902512b39de21b6484d8a5d52f": {
+    "value": "Uniswap V3 WETH/COLLAB 0.01%",
+    "keywords": [
+      "UNI-V3-WETH-COLLAB-100"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -5147,13 +5154,6 @@
     "value": "Uniswap V3: Pool",
     "keywords": [
       "UNI-V3"
-    ],
-    "type": "uniswap-v3-pool"
-  },
-  "0x8dfaf761146020ae8607f95148d2c299317148c8": {
-    "value": "Uniswap V3 WETH/AAVE 0.05%",
-    "keywords": [
-      "UNI-V3-WETH-AAVE-500"
     ],
     "type": "uniswap-v3-pool"
   },
@@ -5791,6 +5791,13 @@
     "value": "Uniswap V3: Pool",
     "keywords": [
       "UNI-V3"
+    ],
+    "type": "uniswap-v3-pool"
+  },
+  "0x8dfaf761146020ae8607f95148d2c299317148c8": {
+    "value": "Uniswap V3 WETH/AAVE 0.05%",
+    "keywords": [
+      "UNI-V3-WETH-AAVE-500"
     ],
     "type": "uniswap-v3-pool"
   },
